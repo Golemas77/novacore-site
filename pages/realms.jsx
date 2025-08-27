@@ -47,7 +47,7 @@ export default function Realms() {
   return (
     <main className="min-h-screen pt-20 pb-24 text-white">
       <div className="mx-auto max-w-5xl px-4">
-        <h1 className="text-3xl font-extrabold mb-6">Realm ai</h1>
+        <h1 className="text-3xl font-extrabold mb-6">Realmai</h1>
 
         <div className="grid gap-6">
           <div className="rounded-2xl bg-white/5 backdrop-blur ring-1 ring-white/10 p-5 sm:p-6 lg:p-7 relative overflow-hidden">
