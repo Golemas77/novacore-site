@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==== Baziniai stiliai ==== */
+@layer base {
+  html, body, #__next { height: 100%; }
+  body { @apply bg-slate-900 text-white antialiased; }
+  ::selection { @apply bg-sky-500/40; }
+}
+
+/* ==== Komponentai: mygtukai, formos, kortelės + fonas ==== */
+@layer components {
+  /* --- Mygtukai --- */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium
+           transition duration-150 ease-out
+           focus:outline-none focus:ring-2 focus:ring-sky-500/50;
+  }
+  .btn-primary { @apply bg-gradient-to-r from-sky-500 to-indigo-500 text-white hover:opacity-90; }
+  .btn-ghost   { @apply bg-white/10 text-white hover:bg-white/20; }
+  .btn-outline { @apply border border-white/20 text-white hover:bg-white/10; }
+  .btn-sm      { @apply text-sm px-3 py-1.5; }
+  .btn-lg      { @apply text-base px-5 py-2.5; }
+  .btn:active  { transform: translateY(0.5px) scale(0.99); }
+  .btn:disabled{ @apply opacity-60 cursor-not-allowed; }
+  .btn .icon   { @apply -ml-1 mr-2 h-5 w-5; }
+
+  /* --- Formos --- */
+  .input { @apply w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500/50; }
+  .label { @apply block text-sm mb-1; }
+
+  /* --- Kortelės --- */
+  .card { @apply p-4 rounded-lg bg-white/5 border border-white/10; }
+
+  /* =========================================================
+     HERO FONAS (kinematografinis):
+     - .bg-ice-cover-blur  -> cover+blur apatinis sluoksnis užpildo šonus
+     - .bg-lich-cover      -> pagrindinis paveikslas (COVER) su fokuso tašku
+     - .bg-ice-glow        -> skaidrūs lediniai švytėjimai
+     - .edge-fade          -> švelniai patamsina šonus/viršų/apačią (be siūlių)
+     - .bg-vignette        -> labai lengva vinjetė
+     - .snowflake          -> snaigės
+     ========================================================= */
+
+  /* 1) apatinis: užpildyti šonus/apačią */
+  .bg-ice-cover-blur {
+    position: absolute; inset: 0;
+    background:
+      url('/bg-lich.jpg') center center / cover no-repeat,
+      linear-gradient(180deg, #0b1220 0%, #0b1524 60%, #0b1220 100%);
+    filter: blur(10px) brightness(0.92) saturate(1.08);
+    transform: scale(1.08); /* kad blur kraštai nesimatytų */
+  }
+
+  /* 2) pagrindinis: graži kompozicija su fokuso tašku (COVER) */
+  .bg-lich-cover {
+    position: absolute; inset: 0;
+    /* keisk --focus-x/--focus-y, kad „pagaudum“ geriausią vietą */
+    background-image: url('/bg-lich.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: var(--focus-x, 55%) var(--focus-y, 35%);
+    filter: brightness(0.98) saturate(1.06);
+  }
+
+  /* 3) skaidrūs lediniai švytėjimai (be nepermatomo gradiento) */
+  .bg-ice-glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(60% 80% at 25% 20%, rgba(56,189,248,0.18), transparent 60%),
+      radial-gradient(80% 60% at 75% 30%, rgba(129,140,248,0.16), transparent 60%),
+      radial-gradient(90% 90% at 50% 120%, rgba(2,132,199,0.24), transparent 70%);
+    background-size: 120% 120%, 120% 120%, 120% 120%;
+    background-position: 0 0, 0 0, 0 0;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+    animation: iceShift 36s linear infinite alternate;
+    filter: saturate(1.04);
+  }
+  @keyframes iceShift {
+    0%   { background-position: 0px 0px, 0px 0px, 0px 0px; }
+    100% { background-position: 60px -50px, -70px 35px, 0px -140px; }
+  }
+
+  /* 4) „edge fade“ – paslepia siūles, gerina teksto kontrastą */
+  .edge-fade {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(to right, rgba(11,18,32,0.85), transparent 18%, transparent 82%, rgba(11,18,32,0.85)),
+      linear-gradient(to bottom, rgba(11,18,32,0.65), transparent 15%, transparent 85%, rgba(11,18,32,0.65));
+    pointer-events: none;
+  }
+
+  /* 5) itin lengva vinjetė (nebūtina, galima išjungti) */
+  .bg-vignette {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(120% 80% at 50% 120%, rgba(0,0,0,0.22) 0%, transparent 60%),
+      radial-gradient(100% 100% at 50% -10%, rgba(0,0,0,0.18) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  /* 6) snaigės */
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    width: 4px; height: 4px;
+    border-radius: 9999px;
+    background: #ffffff;
+    opacity: var(--opacity, .6);
+    box-shadow: 0 0 8px rgba(147,197,253,0.8);
+    transform: scale(var(--scale, 1));
+    animation:
+      snow-fall var(--dur, 18s) linear infinite,
+      snow-sway 6s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+    will-change: transform, margin-left;
+  }
+  @keyframes snow-fall {
+    0%   { transform: translateY(-10%) scale(var(--scale,1)); }
+    100% { transform: translateY(110vh) scale(var(--scale,1)); }
+  }
+  @keyframes snow-sway {
+    0%,100% { margin-left: 0; }
+    50%     { margin-left: 24px; }
+  }
+}

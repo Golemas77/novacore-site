@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "NovaCore startuoja!",
+    "date": "2025-09-01",
+    "excerpt": "Pradedame atvirą beta! PvE serveris su XP x1.5, stabilus startas ir patobulintas naujoko kelias.",
+    "content": "Sveiki atvykę į NovaCore! Startuojame su vienu PvE realm'u (XP x1.5). Esame sutelkę dėmesį į stabilumą, kokybišką leveling'ą ir sklandų startą. Sekite naujienas dėl event'ų ir sezono starto datos."
+  },
+  {
+    "id": 2,
+    "title": "Patch Notes 1.0.1",
+    "date": "2025-09-05",
+    "excerpt": "Pataisyti keli questai, optimizuotas našumas ir smulkūs UI patobulinimai.",
+    "content": "• Ištaisyti keli nutrūkę quest grandinės žingsniai.\n• Pagerintas world serverio našumas piko metu.\n• Smulkūs UI patobulinimai pradinėse zonose."
+  },
+  {
+    "id": 3,
+    "title": "Ekonomikos atnaujinimas",
+    "date": "2025-09-08",
+    "excerpt": "Atnaujintos prekių kategorijos aukciono namuose ir suvienodinti drop rates svarbiausiems crafting resursams.",
+    "content": "Siekiant stabilios ekonomikos, atnaujinome AH kategorijas ir suvienodinome kritinių crafting resursų atsiradimą. Tai padės naujiems žaidėjams greičiau įsivažiuoti."
+  }
+]
