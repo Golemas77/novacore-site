@@ -7,7 +7,8 @@ export default function Navbar() {
           <img
             src="/logo.svg"
             alt="NovaCore"
-            className="h-8 w-8 md:h-8 md:w-8 lg:h-10 lg:w-10 drop-shadow-[0_0_6px_rgba(56,189,248,.35)]"
+            className="h-9 w-9 md:h-10 md:w-10 lg:h-12 lg:w-12
+                       drop-shadow-[0_0_10px_rgba(56,189,248,.45)]"
           />
           <span
             className="hidden sm:inline font-bold text-lg tracking-wide
@@ -19,12 +20,11 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Meniu */}
+        {/* Viršutinis meniu */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-white/80">
           <a href="/news" className="hover:text-white transition">Naujienos</a>
           <a href="/realms" className="hover:text-white transition">Realmai</a>
           <a href="/register" className="hover:text-white transition">Registracija</a>
-
           <a
             href="/how-to-connect"
             className="rounded-md bg-gradient-to-r from-sky-500 to-indigo-500 px-3 py-1.5 font-medium text-white shadow hover:opacity-90"
