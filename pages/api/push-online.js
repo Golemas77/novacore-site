@@ -1,30 +1,36 @@
+// POST /api/push-online
 import { kv } from '@vercel/kv';
 
 export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ ok: false, error: 'Method Not Allowed' });
+  }
+
+  const secret = req.headers['x-cron-secret'] || req.query.secret;
+  if (!process.env.CRON_SECRET || secret !== process.env.CRON_SECRET) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+
   try {
-    if (req.method !== 'POST') {
-      res.setHeader('Allow', 'POST');
-      return res.status(405).json({ ok: false, error: 'Method Not Allowed' });
+    let body = req.body;
+    if (typeof body === 'string') {
+      try { body = JSON.parse(body); } catch { body = {}; }
+    } else if (!body || typeof body !== 'object') {
+      body = {};
     }
 
-    // Paprasta autorizacija per query ?secret=
-    const ok = process.env.CRON_SECRET && req.query.secret === process.env.CRON_SECRET;
-    if (!ok) return res.status(403).json({ ok: false, error: 'Forbidden' });
+    const bots = Number.isFinite(Number(body.bots)) ? Number(body.bots) : 0;
+    const players = Number.isFinite(Number(body.players)) ? Number(body.players) : 0;
 
-    const body = typeof req.body === 'object' ? req.body : JSON.parse(req.body || '{}');
-    const total = Number(body?.total) || 0;
-    const bots = Number(body?.bots) || 0;
-    const players = Number(body?.players) || 0;
+    let total = Number(body.total);
+    if (!Number.isFinite(total)) total = bots + players;
 
-    const snapshot = { total, bots, players, at: Date.now() };
+    const payload = { total, bots, players, at: Date.now() };
+    await kv.set('online:current', payload);
 
-    // >>> TURI sutapti su /api/online-public
-    await kv.set('online:current', snapshot);
-    // (nebūtina) galim uždėti TTL, kad nedingtų senas skaičius per restartus:
-    // await kv.expire('online:current', 60 * 60); // 1h
-
-    return res.status(200).json({ ok: true, snapshot });
+    return res.status(200).json({ ok: true, saved: payload });
   } catch (e) {
-    return res.status(500).json({ ok: false, error: String(e?.message || e) });
+    return res.status(400).json({ ok: false, error: 'Bad payload' });
   }
 }
