@@ -22,9 +22,9 @@ export default function Footer() {
             Šaltinio kodas
           </a>
 
-          {/* Pakeisk nuorodą į savo tikrą kvietimą */}
+          {/* Nuolatinis kvietimas (galiojimas: niekada) */}
           <a
-            href="https://discord.gg/Ht3tMwaG3"
+            href="https://discord.gg/5jkgRskPgj"
             target="_blank"
             rel="noreferrer"
             className="hover:text-sky-300"
