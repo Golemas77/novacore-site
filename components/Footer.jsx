@@ -24,7 +24,7 @@ export default function Footer() {
 
           {/* Pakeisk nuorodą į savo tikrą kvietimą */}
           <a
-            href="https://discord.gg/fsMXA7vY"
+            href="https://discord.gg/Ht3tMwaG3"
             target="_blank"
             rel="noreferrer"
             className="hover:text-sky-300"
