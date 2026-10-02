@@ -6,7 +6,7 @@ export default function News() {
     <div className="space-y-6">
       <h2 className="text-3xl font-bold">Naujienos</h2>
       <div className="space-y-4">
-        {news.map(item => (
+        {[...news].sort((a, b) => b.date.localeCompare(a.date)).map(item => (
           <Link key={item.id} href={`/news/${item.id}`}>
             <article className="p-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition">
               <div className="text-xs text-white/50">{item.date}</div>

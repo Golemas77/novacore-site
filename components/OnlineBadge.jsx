@@ -26,7 +26,7 @@ export default function OnlineBadge() {
     `${total} online`;
 
   return (
-    <span className="inline-flex items-center gap-2 rounded-full bg-emerald-600/10 text-emerald-700 px-3 py-1 text-sm">
+    <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-400/30 px-3 py-1 text-sm">
       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
       {label}
     </span>

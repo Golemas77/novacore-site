@@ -10,7 +10,7 @@ export default function Register() {
     e.preventDefault();
     // TODO: čia vėliau darysim tikrą užklausą į backend (AzerothCore auth)
     // pvz. POST /api/register
-    setMsg("Paskyros kūrimo užklausa nusiųsta (demo). Vėliau sujungsime su backend.");
+    setMsg("Automatinė registracija dar neveikia. Paskyras kol kas kuria administratorius, parašyk mums Discord serveryje.");
   };
 
   return (
@@ -56,7 +56,7 @@ export default function Register() {
         <button className="btn btn-primary">Sukurti paskyrą</button>
 
       </form>
-      {msg && <div className="text-green-400 text-sm">{msg}</div>}
+      {msg && <div className="text-amber-300 text-sm">{msg}</div>}
       <p className="text-white/50 text-sm">
         Jau turi paskyrą? Prisijungimas bus pridėtas netrukus.
       </p>

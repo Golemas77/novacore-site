@@ -18,8 +18,8 @@ export default function HowToConnect() {
     <div className="space-y-6">
       <h2 className="text-3xl font-bold">Kaip prisijungti</h2>
       <ol className="list-decimal pl-6 space-y-2 text-white/80">
-        <li>Atsisiųsk WoW klientą (palaikomą versiją).</li>
-        <li>Atidaryk <code>Data/enUS (ar ruRU)/realmlist.wtf</code> ir įrašyk:
+        <li>Atsisiųsk NovaCore klientą (3.3.5a, HD, su lietuvių kalba) <a className="underline" href="/downloads">čia</a>.</li>
+        <li>Atidaryk <code>Data/enUS/realmlist.wtf</code> ir įrašyk:
           <div className="mt-2 p-3 bg-black/30 rounded flex items-center justify-between">
             <code>{REALMLIST}</code>
             <button onClick={copy} className="ml-4 btn btn-primary btn-sm">
@@ -31,6 +31,10 @@ export default function HowToConnect() {
         <li>Susikurk paskyrą svetainėje (arba <a className="underline" href="/register">registruokis čia</a>).</li>
         <li>Paleisk žaidimą per <code>WoW.exe</code>.</li>
       </ol>
+      <p className="text-white/60 text-sm">
+        Nori hardkoro? Pasirink jį su naujai sukurtu personažu, kol dar negavai nė taško patirties.{' '}
+        <a className="underline" href="/hardcore">Daugiau apie hardkorą</a>.
+      </p>
     </div>
   );
 }

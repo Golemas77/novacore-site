@@ -23,7 +23,9 @@ export default function Navbar() {
         {/* Viršutinis meniu */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-white/80">
           <a href="/news" className="hover:text-white transition">Naujienos</a>
+          <a href="/hardcore" className="hover:text-white transition">Hardkoras</a>
           <a href="/realms" className="hover:text-white transition">Realmai</a>
+          <a href="/downloads" className="hover:text-white transition">Atsisiuntimai</a>
           <a href="/register" className="hover:text-white transition">Registracija</a>
           <a
             href="/how-to-connect"
@@ -33,6 +35,16 @@ export default function Navbar() {
           </a>
         </nav>
       </div>
+
+      {/* Telefono meniu: viena slenkama eilutė */}
+      <nav className="md:hidden flex items-center gap-5 overflow-x-auto whitespace-nowrap border-t border-white/10 px-6 py-2 text-sm text-white/80">
+        <a href="/news" className="hover:text-white">Naujienos</a>
+        <a href="/hardcore" className="hover:text-white">Hardkoras</a>
+        <a href="/realms" className="hover:text-white">Realmai</a>
+        <a href="/downloads" className="hover:text-white">Atsisiuntimai</a>
+        <a href="/register" className="hover:text-white">Registracija</a>
+        <a href="/how-to-connect" className="font-medium text-sky-300 hover:text-sky-200">Prisijunk</a>
+      </nav>
     </header>
   );
 }

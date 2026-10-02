@@ -19,5 +19,54 @@
     "date": "2025-09-08",
     "excerpt": "Atnaujintos prekių kategorijos aukciono namuose ir suvienodinti drop rates svarbiausiems crafting resursams.",
     "content": "Siekiant stabilios ekonomikos, atnaujinome AH kategorijas ir suvienodinome kritinių crafting resursų atsiradimą. Tai padės naujiems žaidėjams greičiau įsivažiuoti."
+  },
+  {
+    "id": 4,
+    "title": "Hardkoro ir karo režimai",
+    "date": "2026-09-25",
+    "excerpt": "Pirmosios mūsų sukurtos žaidimo taisyklės: viena gyvybė ir savanoriškas PvP su papildoma patirtimi.",
+    "content": "• Hardkoro režimas: viena gyvybė, be grupių, PvP, požemių ir aukciono. Žuvus režimas panaikinamas, o personažas lieka. Pradžios zonose atsirado NPC „Hardkoras“.\n• Karo režimas: +20 % patirties už priešus ir užduotis, o PvP vyksta tik tarp karo režimo žaidėjų. Perjungti galima pagrindiniuose miestuose pas Karo vadą.\n• Karo režimas dar testuojamas, todėl pastebėjimus rašykite Discord serveryje."
+  },
+  {
+    "id": 5,
+    "title": "Lietuviški žemėlapiai ir NPC pokalbiai",
+    "date": "2026-09-30",
+    "excerpt": "Išversti žemėlapių užrašai ir apie šešis šimtus žaidėjui girdimų NPC eilučių.",
+    "content": "• Pagrindinių zonų ir požemių žemėlapių užrašai dabar lietuviški.\n• Išversta apie šeši šimtai NPC eilučių, kurias žaidėjas girdi pokalbių lange.\n• Visi terminai laikosi vieno žodyno, todėl vietovių ir frakcijų pavadinimai visur vienodi."
+  },
+  {
+    "id": 6,
+    "title": "Asmeninis grobis",
+    "date": "2026-10-01",
+    "excerpt": "Kiekvienas grupės narys mato ir pasiima tik savo grobį.",
+    "content": "• Kiekvienas grupės narys mato tik savo daiktus ir pasiima juos pats.\n• Paėmus daiktą, visa grupė mato pranešimą ir gali pasikeisti per 2 valandas.\n• Užduočių daiktai atiduodami kiekvienam atskirai, o automatinis surinkimas veikia ir su asmeniniu grobiu.\n• Jei grupė nenori šios sistemos, grupės vadovas gali ją išjungti komanda .grobis isjungti."
+  },
+  {
+    "id": 7,
+    "title": "Požemių pasiuntiniai",
+    "date": "2026-10-01",
+    "excerpt": "Prie beveik šešiasdešimties požemių įėjimų atsirado NPC, duodantys ir priimantys požemių užduotis.",
+    "content": "Nebereikia ieškoti požemių užduočių po visą pasaulį. Prie įėjimų ir ten, kur atsiduri patekęs per grupių paiešką, stovi „Požemio pasiuntinys“. Sistema dar testuojama."
+  },
+  {
+    "id": 8,
+    "title": "Botai ir aukcionas",
+    "date": "2026-10-01",
+    "excerpt": "Botai ima pirkti daiktus ir medžiagas iš aukciono, o sveikinimai pokalbyje išjungti.",
+    "content": "• Botai perka tinkamus daiktus ir profesijų medžiagas iš aukciono už normalias kainas.\n• Į požemį per grupių paiešką dabar patenka visi grupės botai.\n• Botų sveikinimai, kai patenki į požemį ar palieki grupę, išjungti."
+  },
+  {
+    "id": 9,
+    "title": "Burto švytėjimas kaip Retail",
+    "date": "2026-10-01",
+    "excerpt": "Auksinis rėmelis ant burto mygtuko, kai gauni proc'ą. Papildomų priedų nereikia.",
+    "content": "Kai gauni momentinį burtą (pavyzdžiui, Hot Streak ar Slam!), atitinkamas burto mygtukas apsiveja auksiniu rėmeliu. Priedas jau yra kliente ir veikia su lietuviška kalba. Išjungti galima komanda /procs isjungti."
+  },
+  {
+    "id": 10,
+    "title": "Hardkoras iki pabaigos",
+    "date": "2026-10-02",
+    "excerpt": "Pasiekęs 80 lygį gyvas gauni pasiekimą, titulą ir protodrakoną. Visam serveriui parodomas pranešimas.",
+    "content": "• Pasiekimas „Viena gyvybė, 80 lygis“, titulas „Nepalaužiamasis“ ir jojamasis gyvūnas Laike pasiklydęs protodrakonas.\n• Visi prisijungę žaidėjai mato pranešimą ekrano viršuje su garsu.\n• Pasiekus 80 lygį hardkoro apribojimai nuimami.\n• Daugiau apie režimą puslapyje „Hardkoras“."
   }
 ]

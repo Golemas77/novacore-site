@@ -56,6 +56,15 @@ export default function Realms() {
                 <p className="text-sm/6 text-white/70">
                   Populiacija: <span className="font-medium text-white">{population}</span>
                 </p>
+                <p className="text-sm/6 text-white/70">
+                  Versija: <span className="font-medium text-white">3.3.5a (Ličo Karaliaus rūstybė)</span>
+                </p>
+                <p className="text-sm/6 text-white/70">
+                  Kalba: <span className="font-medium text-white">lietuvių</span>
+                </p>
+                <p className="text-sm/6 text-white/70">
+                  Režimai: <span className="font-medium text-white">hardkoras, karo režimas, asmeninis grobis, botai</span>
+                </p>
               </div>
 
               <div className="shrink-0 text-right">

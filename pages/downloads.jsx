@@ -7,7 +7,10 @@ export default function Downloads() {
         <li><a className="underline" href="#" target="_blank" rel="noreferrer">WoW klientas (WotLK) – Tiesioginė nuoroda</a></li>
         <li><a className="underline" href="#" target="_blank" rel="noreferrer">Realmlist keitiklis (Windows)</a></li>
       </ul>
-      <p className="text-white/60 text-sm">Nuorodas vėliau pakeisime į tikras.</p>
+      <p className="text-white/60 text-sm">
+        Reikalingas 3.3.5a (12340) klientas. NovaCore klientas turi HD tekstūras ir lietuvių kalbos pataisas.
+        Nuorodas vėliau pakeisime į tikras, o pagalbos klausk mūsų Discord serveryje.
+      </p>
     </div>
   );
 }

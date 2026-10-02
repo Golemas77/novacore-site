@@ -34,7 +34,7 @@ export default function NewsPost({ item }) {
         <h1 className="text-3xl font-bold">{item.title}</h1>
       </header>
       <article className="prose prose-invert max-w-none">
-        <p>{content}</p>
+        <p className="whitespace-pre-line">{content}</p>
       </article>
     </div>
   );
