@@ -31,7 +31,9 @@ export default async function handler(req, res) {
     const at = Number(data?.at ?? 0);
     const fresh = at > 0 && Date.now() - at < FRESH_MS;
 
-    return res.status(200).json({ ok: true, total, up, fresh, online: up && fresh });
+    const address = typeof data?.ip === 'string' ? data.ip : null;
+
+    return res.status(200).json({ ok: true, total, up, fresh, online: up && fresh, address });
   } catch (e) {
     // saugykla nepasiekiama - nerodome klaidingo skaiciaus
     return res.status(200).json({ ok: false, total: 0, up: false, fresh: false, online: false });

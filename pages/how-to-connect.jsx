@@ -1,10 +1,15 @@
 import { useState } from "react";
-const REALMLIST = "set realmlist login.novacore.gg";
+import useOnline from "../lib/useOnline";
 
 export default function HowToConnect() {
   const [copied, setCopied] = useState(false);
+  const { loaded, address } = useOnline();
+
+  // Serverio adresas ateina is paties serverio (atsinaujina automatiskai, jei pasikeicia IP)
+  const REALMLIST = address ? `set realmlist ${address}` : null;
 
   const copy = async () => {
+    if (!REALMLIST) return;
     try {
       await navigator.clipboard.writeText(REALMLIST);
       setCopied(true);
@@ -21,11 +26,18 @@ export default function HowToConnect() {
         <li>Atsisiųsk NovaCore klientą (3.3.5a, HD, su lietuvių kalba) <a className="underline" href="/downloads">čia</a>.</li>
         <li>Atidaryk <code>Data/enUS/realmlist.wtf</code> ir įrašyk:
           <div className="mt-2 p-3 bg-black/30 rounded flex items-center justify-between">
-            <code>{REALMLIST}</code>
-            <button onClick={copy} className="ml-4 btn btn-primary btn-sm">
-              {copied ? "Nukopijuota!" : "Kopijuoti"}
-            </button>
-
+            {REALMLIST ? (
+              <>
+                <code>{REALMLIST}</code>
+                <button onClick={copy} className="ml-4 btn btn-primary btn-sm">
+                  {copied ? "Nukopijuota!" : "Kopijuoti"}
+                </button>
+              </>
+            ) : (
+              <span className="text-white/60 text-sm">
+                {loaded ? "Serverio adresas šiuo metu nepasiekiamas. Parašyk mums Discord serveryje." : "Kraunamas serverio adresas…"}
+              </span>
+            )}
           </div>
         </li>
         <li>Susikurk paskyrą svetainėje (arba <a className="underline" href="/register">registruokis čia</a>).</li>

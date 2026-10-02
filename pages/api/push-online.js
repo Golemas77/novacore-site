@@ -32,8 +32,14 @@ export default async function handler(req, res) {
   // up: ar veikia zaidimo serveris (jei nepateikta - laikom, kad veikia)
   const up = body.up === undefined ? true : Boolean(body.up);
 
+  // ip: serverio viesas adresas (realmlist); priimame tik tikra IPv4
+  const ip = typeof body.ip === 'string' && /^(\d{1,3}\.){3}\d{1,3}$/.test(body.ip) &&
+    body.ip.split('.').every((n) => Number(n) <= 255) ? body.ip : undefined;
+
   try {
-    await kv.set('online:current', { total, up, at: Date.now() });
+    const prev = await kv.get('online:current');
+    const keepIp = ip || (prev && typeof prev === 'object' ? prev.ip : undefined);
+    await kv.set('online:current', { total, up, ip: keepIp, at: Date.now() });
   } catch {
     // saugykla (Vercel KV / Upstash) nepasiekiama arba nesukonfiguruota
     return res.status(502).json({ ok: false, error: 'Storage error' });
