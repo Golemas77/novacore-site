@@ -90,7 +90,7 @@ export default function Home() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a href="/how-to-connect" className="btn btn-primary">Kaip prisijungti</a>
           <a href="/downloads" className="btn btn-primary">Atsisiuntimai</a>
-          <a href="/hardcore" className="btn btn-outline">Hardkoro režimas</a>
+          <a href="/hardcore" className="btn btn-primary">Hardkoro režimas</a>
         </div>
       </section>
 
