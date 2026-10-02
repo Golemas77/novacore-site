@@ -68,5 +68,12 @@
     "date": "2026-10-02",
     "excerpt": "Pasiekęs 80 lygį gyvas gauni pasiekimą, titulą ir protodrakoną. Visam serveriui parodomas pranešimas.",
     "content": "• Pasiekimas „Viena gyvybė, 80 lygis“, titulas „Nepalaužiamasis“ ir jojamasis gyvūnas Laike pasiklydęs protodrakonas.\n• Visi prisijungę žaidėjai mato pranešimą ekrano viršuje su garsu.\n• Pasiekus 80 lygį hardkoro apribojimai nuimami.\n• Daugiau apie režimą puslapyje „Hardkoras“."
+  },
+  {
+    "id": 11,
+    "title": "NovaCore paleidiklis",
+    "date": "2026-10-02",
+    "excerpt": "Nauja programa, kuri įdiegia ir pati atnaujina klientą, o serverio adresą įrašo už tave.",
+    "content": "• Atsisiųsk NovaCore paleidiklį skiltyje „Atsisiuntimai“. Jis įdiegia klientą (arba panaudoja jau atsisiųstą per torrent) ir kaskart paleidus parsiunčia tik pasikeitusius failus.\n• Pats įrašo teisingą serverio adresą (realmlist), todėl nieko nebereikia taisyti ranka.\n• Atnaujinimai pasirašyti, todėl paleidiklis nepriims failų iš nepatikimo šaltinio.\n• Jei „Windows“ parodo įspėjimą, paspauskite „Daugiau informacijos“, tada „Vis tiek vykdyti“."
   }
 ]

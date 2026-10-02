@@ -23,8 +23,11 @@ export default function HowToConnect() {
     <div className="space-y-6">
       <h2 className="text-3xl font-bold">Kaip prisijungti</h2>
       <ol className="list-decimal pl-6 space-y-2 text-white/80">
-        <li>Atsisiųsk NovaCore klientą (3.3.5a, HD, su lietuvių kalba) <a className="underline" href="/downloads">čia</a>.</li>
-        <li>Atidaryk <code>Data/enUS/realmlist.wtf</code> ir įrašyk:
+        <li>
+          Atsisiųsk <a className="underline" href="/downloads">NovaCore paleidiklį</a>: jis įdiegia klientą (3.3.5a, HD, su lietuvių kalba), pats jį atnaujina ir
+          įrašo serverio adresą. Tuomet pereik prie paskyros kūrimo.
+        </li>
+        <li>Jei naudoji kliento failus be paleidiklio, atidaryk <code>Data/enUS/realmlist.wtf</code> ir įrašyk:
           <div className="mt-2 p-3 bg-black/30 rounded flex items-center justify-between">
             {REALMLIST ? (
               <>

@@ -15,5 +15,11 @@
       }
     ],
     "note": "Reikalinga torrent programa (pavyzdžiui, qBittorrent arba BitTorrent). Atsisiuntimo greitis priklauso nuo dalinančiųjų."
+  },
+  "launcher": {
+    "version": "1.0.0",
+    "url": "/launcher/NovaCoreLauncher.exe",
+    "sizeKB": 216,
+    "sha256": "18772009ba8140c9a7635ccf9827db99a9dde82633bd6314bfae9fe692805521"
   }
 }
