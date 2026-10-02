@@ -1,3 +1,5 @@
+import OnlineBadge from "./OnlineBadge";
+
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-900/70 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60">
@@ -27,6 +29,7 @@ export default function Navbar() {
           <a href="/realms" className="hover:text-white transition">Realmai</a>
           <a href="/downloads" className="hover:text-white transition">Atsisiuntimai</a>
           <a href="/register" className="hover:text-white transition">Registracija</a>
+          <span className="hidden lg:inline-flex"><OnlineBadge compact /></span>
           <a
             href="/how-to-connect"
             className="rounded-md bg-gradient-to-r from-sky-500 to-indigo-500 px-3 py-1.5 font-medium text-white shadow hover:opacity-90"
@@ -44,6 +47,7 @@ export default function Navbar() {
         <a href="/downloads" className="hover:text-white">Atsisiuntimai</a>
         <a href="/register" className="hover:text-white">Registracija</a>
         <a href="/how-to-connect" className="font-medium text-sky-300 hover:text-sky-200">Prisijunk</a>
+        <OnlineBadge compact />
       </nav>
     </header>
   );

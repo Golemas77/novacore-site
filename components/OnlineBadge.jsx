@@ -1,34 +1,33 @@
-import { useEffect, useState } from "react";
+import useOnline, { formatCount } from "../lib/useOnline";
 
-export default function OnlineBadge() {
-  const [total, setTotal] = useState(null);   // null = kraunasi, 0 = gauta
+// Rodo bendra prisijungusiu skaiciu. Jei serveris islaustas – pilka zyme; jei duomenu nera – nieko nerodo.
+export default function OnlineBadge({ compact = false }) {
+  const { loaded, ok, online, total } = useOnline();
 
-  useEffect(() => {
-    let cancelled = false;
+  const size = (compact ? "px-2.5 py-0.5 text-xs" : "px-3 py-1 text-sm") + " whitespace-nowrap";
 
-    async function load() {
-      try {
-        const res = await fetch("/api/online-public", { cache: "no-store" });
-        const json = await res.json();
-        if (!cancelled) setTotal(Number(json.total ?? 0));
-      } catch {
-        if (!cancelled) setTotal(0);
-      }
-    }
+  if (!loaded) {
+    return (
+      <span className={`inline-flex items-center gap-2 rounded-full bg-white/10 text-white/60 ring-1 ring-white/10 ${size}`}>
+        Kraunama…
+      </span>
+    );
+  }
+  if (!ok) return null;
 
-    load();                        // pirmas užklausimas
-    const id = setInterval(load, 10_000); // poll kas 10 s
-    return () => { cancelled = true; clearInterval(id); };
-  }, []);
-
-  const label =
-    total === null ? "Kraunama..." :
-    `${total} online`;
+  if (!online) {
+    return (
+      <span className={`inline-flex items-center gap-2 rounded-full bg-white/10 text-white/70 ring-1 ring-white/15 ${size}`}>
+        <span className="h-2 w-2 rounded-full bg-slate-400" />
+        Serveris išjungtas
+      </span>
+    );
+  }
 
   return (
-    <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-400/30 px-3 py-1 text-sm">
-      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-      {label}
+    <span className={`inline-flex items-center gap-2 rounded-full bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-400/30 ${size}`}>
+      <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+      {formatCount(total)} online
     </span>
   );
 }

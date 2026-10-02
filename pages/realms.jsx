@@ -1,43 +1,12 @@
-import { useEffect, useState } from 'react';
+import useOnline, { formatCount } from '../lib/useOnline';
 
 export default function Realms() {
-  const [count, setCount] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [err, setErr] = useState(null);
-
-  useEffect(() => {
-    let alive = true;
-
-    async function load() {
-      try {
-        const r = await fetch('/api/online-public', { cache: 'no-store' });
-        const j = await r.json();
-        if (!alive) return;
-        setErr(null);
-        setCount(Number(j?.total ?? 0)); // <— jokio j.ok tikrinimo
-      } catch (e) {
-        if (!alive) return;
-        setErr(String(e));
-        setCount(null);
-      } finally {
-        if (alive) setLoading(false);
-      }
-    }
-
-    load();
-    const id = setInterval(load, 10_000); // poll kas 10 s
-    return () => { alive = false; clearInterval(id); };
-  }, []);
-
-  const nice = (n) =>
-    typeof n === 'number' && !Number.isNaN(n)
-      ? new Intl.NumberFormat('lt-LT').format(n)
-      : '—';
+  const { loaded, ok, online, total } = useOnline();
 
   const population =
-    count == null ? 'Nežinoma'
-    : count < 200 ? 'Žema'
-    : count < 1000 ? 'Vidutinė'
+    !loaded || !ok || !online ? 'Nežinoma'
+    : total < 200 ? 'Žema'
+    : total < 1000 ? 'Vidutinė'
     : 'Didelė';
 
   return (
@@ -68,24 +37,29 @@ export default function Realms() {
               </div>
 
               <div className="shrink-0 text-right">
-                <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 px-3 py-1.5 ring-1 ring-emerald-400/30">
-                  <span className="inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_2px_rgba(52,211,153,.6)]" />
-                  <span className="text-sm font-medium text-emerald-200">Prisijungę</span>
-                </div>
+                {online ? (
+                  <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 px-3 py-1.5 ring-1 ring-emerald-400/30">
+                    <span className="inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_2px_rgba(52,211,153,.6)]" />
+                    <span className="text-sm font-medium text-emerald-200">Prisijungę</span>
+                  </div>
+                ) : (
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 ring-1 ring-white/15">
+                    <span className="inline-block h-2.5 w-2.5 rounded-full bg-slate-400" />
+                    <span className="text-sm font-medium text-white/70">
+                      {!loaded ? 'Kraunama…' : ok ? 'Serveris išjungtas' : 'Būsena nepasiekiama'}
+                    </span>
+                  </div>
+                )}
 
                 <div className="mt-3 text-2xl font-bold tracking-tight">
-                  {loading ? (
-                    <span className="text-white/70">Kraunama…</span>
-                  ) : count == null ? (
-                    <span className="text-white/70">Nepasiekiama</span>
+                  {!loaded ? (
+                    <span className="text-white/70">…</span>
+                  ) : online ? (
+                    formatCount(total)
                   ) : (
-                    nice(count)
+                    <span className="text-white/50">—</span>
                   )}
                 </div>
-
-                {err && (
-                  <p className="mt-1 text-xs text-red-300/80 max-w-[20rem]">{err}</p>
-                )}
               </div>
             </div>
 
