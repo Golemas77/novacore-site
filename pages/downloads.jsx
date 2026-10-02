@@ -57,7 +57,13 @@ export default function Downloads() {
         <div className="flex flex-wrap gap-3">
           {links.map((l) =>
             l.url ? (
-              <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="btn btn-primary">
+              <a
+                key={l.label}
+                href={l.url}
+                {...(l.download ? { download: true } : {})}
+                {...(/^https?:/i.test(l.url) ? { target: "_blank", rel: "noreferrer" } : {})}
+                className="btn btn-primary"
+              >
                 {l.label}
               </a>
             ) : (
@@ -67,6 +73,7 @@ export default function Downloads() {
             )
           )}
         </div>
+        {hasLink && client.note && <p className="text-sm text-white/60">{client.note}</p>}
         {!hasLink && (
           <p className="text-sm text-amber-300">
             Atsisiuntimo nuoroda bus paskelbta netrukus. Naujienas sek mūsų Discord serveryje.

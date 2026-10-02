@@ -2,10 +2,18 @@
   "client": {
     "title": "NovaCore klientas",
     "subtitle": "Ličo Karaliaus rūstybė 3.3.5a (12340), HD tekstūros ir lietuvių kalba",
-    "size": "apie 25 GB",
+    "size": "24,4 GB",
     "links": [
-      { "label": "Torrent", "url": "" },
-      { "label": "Tiesioginė nuoroda", "url": "" }
-    ]
+      {
+        "label": "Atsisiųsti .torrent failą",
+        "url": "/NovaCore-3.3.5a.torrent",
+        "download": true
+      },
+      {
+        "label": "Magnet nuoroda",
+        "url": "magnet:?xt=urn:btih:a3165f6c13d233e77d2872a99612fe89b0807a79&dn=NovaCore%203.3.5a&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
+      }
+    ],
+    "note": "Reikalinga torrent programa (pavyzdžiui, qBittorrent arba BitTorrent). Atsisiuntimo greitis priklauso nuo dalinančiųjų."
   }
 }
