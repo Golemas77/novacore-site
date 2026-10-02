@@ -75,5 +75,12 @@
     "date": "2026-10-02",
     "excerpt": "Nauja programa, kuri įdiegia ir pati atnaujina klientą, o serverio adresą įrašo už tave.",
     "content": "• Atsisiųsk NovaCore paleidiklį skiltyje „Atsisiuntimai“. Jis įdiegia klientą (arba panaudoja jau atsisiųstą per torrent) ir kaskart paleidus parsiunčia tik pasikeitusius failus.\n• Pats įrašo teisingą serverio adresą (realmlist), todėl nieko nebereikia taisyti ranka.\n• Atnaujinimai pasirašyti, todėl paleidiklis nepriims failų iš nepatikimo šaltinio.\n• Jei „Windows“ parodo įspėjimą, paspauskite „Daugiau informacijos“, tada „Vis tiek vykdyti“."
+  },
+  {
+    "id": 12,
+    "title": "NovaCore Discord serveris atidarytas",
+    "date": "2026-10-03",
+    "excerpt": "Mūsų bendruomenė turi namus Discord: naujienos, pagalba prisijungiant, klaidų ir vertimo pranešimai, grupių paieška ir hardkoro šlovės lenta.",
+    "content": "• Prisijunk per nuorodą „Discord“ svetainės apačioje.\n• Kanalai skirti tik NovaCore: sveiki-atvykę ir taisyklės, naujienos, atnaujinimai, hardkoras, karo režimas, išvaizdos keitimas, požemiai ir reidai, prekyba, grupių paieška bei balso kanalai.\n• Radai neišverstą ar blogai išverstą tekstą? Parašyk į kanalą „vertimo-klaidos“ su ekrano nuotrauka. Tai labai padeda tobulinti lietuvišką žaidimą.\n• Klaidų pranešimams ir pasiūlymams yra atskiri kanalai, o jei kas nors nepavyksta prisijungiant, rašyk į „pagalba-prisijungiant“.\n• Kai kas nors pasieks 80 lygį hardkoru, Discord serveryje apie tai paskelbsime automatiškai, o naujienos ir kliento atnaujinimai ten atsiras iškart."
   }
 ]
