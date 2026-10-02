@@ -1,0 +1,39 @@
+<!-- /public/logo.svg -->
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradientas kaip hero: sky -> indigo -->
+    <linearGradient id="g" x1="14" y1="10" x2="54" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <!-- Švelnus glow žvaigždutei -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Apskritimas su gradientu ir subtiliu ratu -->
+  <circle cx="32" cy="32" r="28" fill="url(#g)"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#93C5FD" stroke-opacity="0.35" stroke-width="2"/>
+
+  <!-- 5-kampė žvaigždutė centre -->
+  <g filter="url(#glow)">
+    <polygon fill="#FFFFFF" points="
+      32,14
+      36.9,26.2
+      50,26.8
+      39.2,34.8
+      42.8,47.6
+      32,40
+      21.2,47.6
+      24.8,34.8
+      14,26.8
+      27.1,26.2
+    "/>
+  </g>
+</svg>

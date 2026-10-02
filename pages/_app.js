@@ -4,11 +4,19 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BackgroundFX from "../components/BackgroundFX";
+import { useRouter } from "next/router";
+import { site } from "../lib/site";
 
 export default function App({ Component, pageProps }) {
+  // Kanoninis adresas ir og:url: be užklausos parametrų ir be galinio brūkšnio
+  const { asPath } = useRouter();
+  const cleanPath = (asPath || "/").split("?")[0].split("#")[0];
+  const canonical = site.url + (cleanPath === "/" ? "" : cleanPath.replace(/\/$/, ""));
   return (
     <div className="relative isolate min-h-screen text-white flex flex-col">
       <Head>
+        <link rel="canonical" href={canonical} />
+        <meta property="og:url" content={canonical} />
         <title>NovaCore – lietuviškas WoW privatus serveris</title>
         <meta
           name="description"
