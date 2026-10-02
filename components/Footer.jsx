@@ -11,6 +11,17 @@ export default function Footer() {
 
         {/* Dešinėje – paliekam tik Discord */}
         <nav className="flex items-center gap-6">
+          {/* Serverio šaltinis: AGPLv3 reikalauja pasiūlyti žaidėjams pakeistą kodą */}
+          <a
+            href="https://github.com/Golemas77/novacore-server"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-sky-300"
+            title="Serverio šaltinio kodas (AGPL-3.0)"
+          >
+            Šaltinio kodas
+          </a>
+
           {/* Pakeisk nuorodą į savo tikrą kvietimą */}
           <a
             href="https://discord.gg/fsMXA7vY"
