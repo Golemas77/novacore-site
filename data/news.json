@@ -56,6 +56,13 @@
     "content": "Kai gauni momentinį burtą (pavyzdžiui, Hot Streak ar Slam!), atitinkamas burto mygtukas apsiveja auksiniu rėmeliu. Priedas jau yra kliente ir veikia su lietuviška kalba. Išjungti galima komanda /procs isjungti."
   },
   {
+    "id": 10,
+    "title": "Registracija svetainėje",
+    "date": "2026-10-02",
+    "excerpt": "Paskyrą dabar gali susikurti pats, tiesiog svetainėje.",
+    "content": "• Puslapyje „Registracija“ įvesk vartotojo vardą, el. paštą ir slaptažodį, ir paskyra sukuriama tiesiai mūsų žaidimo serveryje.\n• Slaptažodis niekur nesaugomas atviru tekstu.\n• Paskyra paprastai sukuriama per kelias sekundes.\n• Jei kyla problemų, rašyk mums Discord serveryje."
+  },
+  {
     "id": 9,
     "title": "Hardkoras iki pabaigos",
     "date": "2026-10-02",
