@@ -1,0 +1,15 @@
+{
+  "launcher": {
+    "version": "1.0.0",
+    "url": "/launcher/NovaCoreLauncher.exe",
+    "sha256": "6858363e5ccc1f9966cafe770ed60c61db518bae46869713c233e1fcaf484454"
+  },
+  "updateUrls": [
+    "http://{address}:8740/"
+  ],
+  "torrent": {
+    "magnet": "magnet:?xt=urn:btih:a3165f6c13d233e77d2872a99612fe89b0807a79&dn=NovaCore%203.3.5a&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce",
+    "file": "/NovaCore-3.3.5a.torrent"
+  },
+  "site": "https://novacore-site.vercel.app"
+}
