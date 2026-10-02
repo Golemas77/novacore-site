@@ -50,20 +50,13 @@
   },
   {
     "id": 8,
-    "title": "Botai ir aukcionas",
-    "date": "2026-10-01",
-    "excerpt": "Botai ima pirkti daiktus ir medžiagas iš aukciono, o sveikinimai pokalbyje išjungti.",
-    "content": "• Botai perka tinkamus daiktus ir profesijų medžiagas iš aukciono už normalias kainas.\n• Į požemį per grupių paiešką dabar patenka visi grupės botai.\n• Botų sveikinimai, kai patenki į požemį ar palieki grupę, išjungti."
-  },
-  {
-    "id": 9,
     "title": "Burto švytėjimas kaip Retail",
     "date": "2026-10-01",
     "excerpt": "Auksinis rėmelis ant burto mygtuko, kai gauni proc'ą. Papildomų priedų nereikia.",
     "content": "Kai gauni momentinį burtą (pavyzdžiui, Hot Streak ar Slam!), atitinkamas burto mygtukas apsiveja auksiniu rėmeliu. Priedas jau yra kliente ir veikia su lietuviška kalba. Išjungti galima komanda /procs isjungti."
   },
   {
-    "id": 10,
+    "id": 9,
     "title": "Hardkoras iki pabaigos",
     "date": "2026-10-02",
     "excerpt": "Pasiekęs 80 lygį gyvas gauni pasiekimą, titulą ir protodrakoną. Visam serveriui parodomas pranešimas.",

@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
         <title>NovaCore – lietuviškas WoW privatus serveris</title>
         <meta
           name="description"
-          content="NovaCore – lietuviškas World of Warcraft (WotLK 3.3.5a) privatus serveris, paremtas AzerothCore: hardkoro režimas, botai, asmeninis grobis ir HD klientas."
+          content="NovaCore – lietuviškas World of Warcraft (WotLK 3.3.5a) privatus serveris, paremtas AzerothCore: hardkoro režimas, asmeninis grobis ir HD klientas."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0b1220" />

@@ -9,8 +9,8 @@ const features = [
     tag: 'Veikia',
   },
   {
-    title: 'Žaisk vienas su botais',
-    text: 'Botai eina į požemius, perka iš aukciono ir netriukšmauja pokalbiuose. Žmonių grupės taip pat laukiamos.',
+    title: 'Lietuviški žemėlapiai',
+    text: 'Zonų ir požemių žemėlapių užrašai išversti, todėl vietovių pavadinimai skamba lietuviškai ir ten, kur jų nepasiekia tekstai.',
     tag: 'Veikia',
   },
   {
@@ -82,7 +82,7 @@ export default function Home() {
         </h1>
         <p className="mt-6 text-white/70 max-w-2xl mx-auto">
           Ličo Karaliaus rūstybės (3.3.5a) serveris, paremtas AzerothCore. Pilnai išverstas į lietuvių kalbą,
-          su HD klientu ir mūsų pačių sukurtomis sistemomis. Žaisti galima net vienam.
+          su HD klientu ir mūsų pačių sukurtomis sistemomis.
         </p>
         <div className="mt-6 flex justify-center">
           <OnlineBadge />

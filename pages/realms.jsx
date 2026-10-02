@@ -63,7 +63,7 @@ export default function Realms() {
                   Kalba: <span className="font-medium text-white">lietuvių</span>
                 </p>
                 <p className="text-sm/6 text-white/70">
-                  Režimai: <span className="font-medium text-white">hardkoras, karo režimas, asmeninis grobis, botai</span>
+                  Režimai: <span className="font-medium text-white">hardkoras, karo režimas, asmeninis grobis</span>
                 </p>
               </div>
 
