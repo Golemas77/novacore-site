@@ -1,8 +1,8 @@
 {
   "launcher": {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "url": "/launcher/NovaCoreLauncher.exe",
-    "sha256": "49fc8984d3ff599841e867a9602aa03348fee430431ba54983b02ae5ba04923e"
+    "sha256": "f423d634ad4f1762d229da539febea96300f53b61eafd40b72309ddbd37e67c0"
   },
   "updateUrls": [
     "http://{address}:8740/"
