@@ -82,5 +82,12 @@
     "date": "2026-10-03",
     "excerpt": "Mūsų bendruomenė turi namus Discord: naujienos, pagalba prisijungiant, klaidų ir vertimo pranešimai, grupių paieška ir hardkoro šlovės lenta.",
     "content": "• Prisijunk per nuorodą „Discord“ svetainės apačioje.\n• Kanalai skirti tik NovaCore: sveiki-atvykę ir taisyklės, naujienos, atnaujinimai, hardkoras, karo režimas, išvaizdos keitimas, požemiai ir reidai, prekyba, grupių paieška bei balso kanalai.\n• Radai neišverstą ar blogai išverstą tekstą? Parašyk į kanalą „vertimo-klaidos“ su ekrano nuotrauka. Tai labai padeda tobulinti lietuvišką žaidimą.\n• Klaidų pranešimams ir pasiūlymams yra atskiri kanalai, o jei kas nors nepavyksta prisijungiant, rašyk į „pagalba-prisijungiant“.\n• Kai kas nors pasieks 80 lygį hardkoru, Discord serveryje apie tai paskelbsime automatiškai, o naujienos ir kliento atnaujinimai ten atsiras iškart."
+  },
+  {
+    "id": 13,
+    "title": "Vyksta testavimas, oficialus paleidimas – 2027 m. sausį",
+    "date": "2026-10-03",
+    "excerpt": "NovaCore dabar testuojamas. Oficialus paleidimas bus 2027 m. sausį, prieš jį viskas bus išvalyta, o testuotojams bus atsilyginta.",
+    "content": "• NovaCore dabar yra testavimo etape: serveris, kliento atnaujinimai ir sistemos dar keičiami, todėl gali pasitaikyti klaidų.\n• Oficialus paleidimas bus 2027 m. sausį. Tikslią dieną paskelbsime vėliau.\n• Prieš oficialų paleidimą viskas bus pilnai išvalyta: personažai, pažanga ir daiktai prasidės iš naujo visiems vienodai.\n• Visiems, kurie dalyvaus testavime, kai startuos oficialus paleidimas bus atsilyginta. Kuo ir kaip – paskelbsime vėliau.\n• Ką daryti dabar: žaisk, išbandyk sistemas ir apie klaidas bei netikslius vertimus rašyk mūsų Discord serveryje."
   }
 ]

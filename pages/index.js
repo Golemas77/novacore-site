@@ -94,6 +94,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TESTAVIMO PRANEŠIMAS */}
+      <section id="testavimas" className="-mt-8 md:-mt-12">
+        <div className="mx-auto max-w-3xl rounded-2xl bg-amber-500/10 ring-1 ring-amber-400/30 p-6 backdrop-blur">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center rounded-full bg-amber-500/20 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-amber-200 ring-1 ring-amber-400/30">
+              Testavimas
+            </span>
+            <h2 className="text-xl md:text-2xl font-bold text-amber-100">Dabar vyksta testavimas</h2>
+          </div>
+          <ul className="mt-4 space-y-2 text-sm/6 text-white/80 list-disc pl-5">
+            <li>Serveris ir kliento atnaujinimai dar keičiami, todėl pasitaiko klaidų.</li>
+            <li>
+              Oficialus paleidimas bus <strong className="text-white">2027 m. sausį</strong>. Tikslią dieną paskelbsime vėliau.
+            </li>
+            <li>Prieš oficialų paleidimą viskas bus pilnai išvalyta: personažai, pažanga ir daiktai prasidės iš naujo.</li>
+            <li>Kas dalyvaus testavime, tiems startavus oficialiam paleidimui bus atsilyginta. Kuo ir kaip, paskelbsime vėliau.</li>
+          </ul>
+          <div className="mt-4">
+            <Link href="/news/13" className="text-sm text-amber-200 underline decoration-amber-300/50 hover:text-white">
+              Skaityti plačiau →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* SISTEMOS */}
       <section id="sistemos" className="space-y-6">
         <div>

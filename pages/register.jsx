@@ -104,6 +104,10 @@ export default function Register() {
       <p className="text-white/70 text-sm">
         Susikurk žaidimo paskyrą ir galėsi iškart prisijungti prie serverio. Slaptažodis niekur nesaugomas atviru tekstu.
       </p>
+      <div className="rounded-lg bg-amber-500/10 ring-1 ring-amber-400/30 p-3 text-sm/6 text-amber-100">
+        Šiuo metu vyksta testavimas. Oficialus paleidimas – 2027 m. sausį, o prieš jį personažai ir pažanga bus išvalyti.
+        Testavime dalyvavusiems žaidėjams bus atsilyginta. <a className="underline" href="/news/13">Plačiau</a>
+      </div>
 
       <form onSubmit={onSubmit} className="space-y-4" autoComplete="off">
         <div>

@@ -14,6 +14,11 @@ export default function Realms() {
       <div className="mx-auto max-w-5xl px-4">
         <h1 className="text-3xl font-extrabold mb-6">Realmai</h1>
 
+        <div className="mb-6 rounded-lg bg-amber-500/10 ring-1 ring-amber-400/30 p-4 text-sm/6 text-amber-100">
+          <strong>Testavimo realmas.</strong> Oficialus paleidimas – 2027 m. sausį (tiksli diena bus paskelbta vėliau). Prieš jį viskas
+          bus pilnai išvalyta, o testavime dalyvavusiems žaidėjams bus atsilyginta. <a className="underline" href="/news/13">Plačiau</a>
+        </div>
+
         <div className="grid gap-6">
           <div className="rounded-2xl bg-white/5 backdrop-blur ring-1 ring-white/10 p-5 sm:p-6 lg:p-7 relative overflow-hidden">
             <div className="flex items-start justify-between gap-4">

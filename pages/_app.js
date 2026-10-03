@@ -4,6 +4,7 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BackgroundFX from "../components/BackgroundFX";
+import TestBanner from "../components/TestBanner";
 import { useRouter } from "next/router";
 import { site } from "../lib/site";
 
@@ -36,6 +37,7 @@ export default function App({ Component, pageProps }) {
       {/* TURINYS virš fono */}
       <div className="relative z-10 flex flex-col min-h-screen">
         <Navbar />
+        <TestBanner />
         <main className="max-w-6xl mx-auto px-6 py-10 w-full flex-1">
           <Component {...pageProps} />
         </main>
