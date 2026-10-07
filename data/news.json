@@ -89,5 +89,12 @@
     "date": "2026-10-03",
     "excerpt": "NovaCore dabar testuojamas. Oficialus paleidimas bus 2027 m. sausį, prieš jį viskas bus išvalyta, o testuotojams bus atsilyginta.",
     "content": "• NovaCore dabar yra testavimo etape: serveris, kliento atnaujinimai ir sistemos dar keičiami, todėl gali pasitaikyti klaidų.\n• Oficialus paleidimas bus 2027 m. sausį. Tikslią dieną paskelbsime vėliau.\n• Prieš oficialų paleidimą viskas bus pilnai išvalyta: personažai, pažanga ir daiktai prasidės iš naujo visiems vienodai.\n• Visiems, kurie dalyvaus testavime, kai startuos oficialus paleidimas bus atsilyginta. Kuo ir kaip – paskelbsime vėliau.\n• Ką daryti dabar: žaisk, išbandyk sistemas ir apie klaidas bei netikslius vertimus rašyk mūsų Discord serveryje."
+  },
+  {
+    "id": 14,
+    "title": "Autopilotas ir automatinė rotacija – visiems",
+    "date": "2026-10-08",
+    "excerpt": "Du nauji pagalbininkai prieinami visiems žaidėjams: mygtukas „R“ (automatinė kovos rotacija) ir „A“ (autopilotas). Šiuo testavimo laikotarpiu jie prieinami visiems.",
+    "content": "• Mygtukas „R“ – automatinė kovos rotacija: kovą pradedi pats, gebėjimus pagal klasę ir specializaciją toliau naudoja serveris.\n• Mygtukas „A“ – autopilotas: veikėjas pats kelia lygį, atlieka ir atiduoda užduotis, renka užduočių daiktus, parduoda daiktus pas pardavėjus, dalyvauja aukcione ir jungiasi į mūšio laukus.\n• Mygtukai atsiranda apatiniame kairiajame kampe. Kairysis spragtelėjimas įjungia / išjungia, dešinysis rodo informaciją, o su Shift ir dešiniuoju pelės klavišu mygtuką galima nutempti į patogią vietą.\n• Kol autopilotas veikia, veikėjo patys judinti negalite – išjunkite jį mygtuku „A“ (arba komanda /autopilotas).\n• Gauti: paleisk paleidiklį, jis parsiųs atnaujinimą (versija 2026-10-07). Žaidime galima naudoti ir komandas /rotacija bei /autopilotas.\n• Funkcijos naujos, todėl gali pasitaikyti klaidų – apie jas rašyk mūsų Discord serveryje."
   }
 ]
