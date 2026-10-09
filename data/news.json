@@ -96,5 +96,13 @@
     "date": "2026-10-08",
     "excerpt": "Du nauji pagalbininkai prieinami visiems žaidėjams: mygtukas „R“ (automatinė kovos rotacija) ir „A“ (autopilotas). Šiuo testavimo laikotarpiu jie prieinami visiems.",
     "content": "• Mygtukas „R“ – automatinė kovos rotacija: kovą pradedi pats, gebėjimus pagal klasę ir specializaciją toliau naudoja serveris.\n• Mygtukas „A“ – autopilotas: veikėjas pats kelia lygį, atlieka ir atiduoda užduotis, renka užduočių daiktus, parduoda daiktus pas pardavėjus, dalyvauja aukcione ir jungiasi į mūšio laukus.\n• Mygtukai atsiranda apatiniame kairiajame kampe. Kairysis spragtelėjimas įjungia / išjungia, dešinysis rodo informaciją, o su Shift ir dešiniuoju pelės klavišu mygtuką galima nutempti į patogią vietą.\n• Kol autopilotas veikia, veikėjo patys judinti negalite – išjunkite jį mygtuku „A“ (arba komanda /autopilotas).\n• Gauti: paleisk paleidiklį, jis parsiųs atnaujinimą (versija 2026-10-07). Žaidime galima naudoti ir komandas /rotacija bei /autopilotas.\n• Funkcijos naujos, todėl gali pasitaikyti klaidų – apie jas rašyk mūsų Discord serveryje."
+  },
+  {
+    "id": 15,
+    "title": "Žemėlapyje atsirado zonų lygiai, o autopilotas tapo išradingesnis",
+    "date": "2026-10-09",
+    "excerpt": "Pasaulio žemėlapyje matysi kiekvienos zonos lygių ribas, nuspalvintas pagal tavo lygį. Autopilotas pats persikelia į tinkamą zoną, spaudžia narvus, skaito užduočių knygas ir nebeužstringa urvuose.",
+    "content": "Šiandien atnaujinome paleidiklį ir serverį. Naujienos:\n\n• Zonų lygiai žemėlapyje. Atidaryk pasaulio žemėlapį (M) ir užveski pelę ant zonos: prie pavadinimo matysi jos lygių ribas, pvz. „Dykros (10-25)“. Atidarius pačią zoną, ribos rodomos žemėlapio viršuje kairėje.\n• Spalvos pagal tavo lygį: raudona – zona per sunki, oranžinė – šiek tiek per sunki, geltona – tinka, žalia – lengva, pilka – per lengva. Priedas „NovaCore zonų lygiai“ įdiegiamas per paleidiklį automatiškai (/zonulygiai debug parodo zonas, kurių lygių dar nežinome).\n• Autopilotas (mygtukas A) dabar: persikelia į tavo lygiui tinkamą zoną, kai aplinkiniai priešai tampa per silpni; paspaudžia narvus ir svirtis užduotyse (belaisvių išlaisvinimas); perskaito užduočių knygas ir naudoja užduočių daiktus; kai kelio tinklu nėra (urvai, uždaros vietos), eina tiesiai per kliūtis, kad nebeužstrigtų.\n\nViskas dar testuojama, todėl klaidas ir pasiūlymus rašykite Discord. Esame nepelno entuziastų projektas, nesusijęs su Blizzard Entertainment.",
+    "image": "/news/zonu-lygiai-zemynas.jpg"
   }
 ]
