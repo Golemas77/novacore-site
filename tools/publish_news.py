@@ -4,6 +4,7 @@
 Šablono failas (UTF-8; eilutės, prasidedančios #, ignoruojamos):
     PAVADINIMAS: Trumpas pavadinimas
     SANTRAUKA: Vienas du sakiniai kortelei (iki ~200 simbolių)
+    PAVEIKSLAS: /news/failas.jpg      (nebūtina; failas turi būti public/news/ aplanke)
     TEKSTAS:
     • Pirma eilutė
     • Antra eilutė
@@ -28,22 +29,23 @@ from pathlib import Path
 
 SITE_DIR = Path(os.environ.get("NOVACORE_SITE_DIR", r"C:\NovaCoreSite"))
 NEWS = SITE_DIR / "data" / "news.json"
-SITE_URL = "https://novacore-site.vercel.app"
+SITE_URL = "https://www.novacore.lt"
 NOTIFY = Path(r"C:\NovaCore\discord_notify.py")
 
 
 def parse_template(path):
-    title = excerpt = None
+    title = excerpt = image = None
     body, mode = [], None
     for raw in Path(path).read_text(encoding="utf-8-sig").splitlines():
         line = raw.rstrip()
         if line.lstrip().startswith("#") and mode != "body":
             continue
-        m = re.match(r"^\s*(PAVADINIMAS|SANTRAUKA|TEKSTAS)\s*:\s*(.*)$", line, re.I)
+        m = re.match(r"^\s*(PAVADINIMAS|SANTRAUKA|PAVEIKSLAS|TEKSTAS)\s*:\s*(.*)$", line, re.I)
         if m and mode != "body":
             key, val = m.group(1).upper(), m.group(2).strip()
             if key == "PAVADINIMAS": title = val
             elif key == "SANTRAUKA": excerpt = val
+            elif key == "PAVEIKSLAS": image = val
             else:
                 mode = "body"
                 if val: body.append(val)
@@ -51,7 +53,7 @@ def parse_template(path):
         if mode == "body":
             body.append(line)
     content = "\n".join(body).strip()
-    return title, excerpt, content
+    return title, excerpt, content, image
 
 
 def run(cmd, **kw):
@@ -70,7 +72,7 @@ def main():
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 
-    title, excerpt, content = parse_template(a.failas)
+    title, excerpt, content, image = parse_template(a.failas)
     problems = []
     if not title or len(title) > 90: problems.append("PAVADINIMAS privalomas (iki 90 simbolių)")
     if not excerpt or len(excerpt) > 260: problems.append("SANTRAUKA privaloma (iki 260 simbolių)")
@@ -82,6 +84,11 @@ def main():
     news = json.loads(NEWS.read_text(encoding="utf-8"))
     nid = max(x["id"] for x in news) + 1
     item = {"id": nid, "title": title, "date": a.data or date.today().isoformat(), "excerpt": excerpt, "content": content}
+    if image:
+        if not (SITE_DIR / "public" / image.lstrip("/")).exists():
+            print("KLAIDA: paveikslėlio nėra: public" + image)
+            return 2
+        item["image"] = image
     link = "%s/news/%d" % (SITE_URL, nid)
     print("Naujiena #%d: %s\n  %s\n  nuoroda: %s" % (nid, title, excerpt, link))
     if a.sausas:
@@ -100,7 +107,7 @@ def main():
                 NEWS.write_bytes(backup)
                 print("KLAIDA: svetainė nesikompiliuoja, naujiena NEįdėta.\n" + out[-1200:])
                 return 3
-        code, out = run(["git", "add", "data/news.json"])
+        code, out = run(["git", "add", "data/news.json", "public/news"])
         code2, out2 = run(["git", "commit", "-q", "-m", "Naujiena: %s\n\nCo-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>" % title])
         code3, out3 = run(["git", "push", "-q", "origin", "main"])
         if code or code2 or code3:
@@ -122,7 +129,7 @@ def main():
 
     if not a.be_discord:
         tmp = Path(tempfile.gettempdir()) / "novacore_news_discord.json"
-        tmp.write_text(json.dumps({"title": title, "excerpt": excerpt, "content": content, "url": link}, ensure_ascii=False), encoding="utf-8")
+        tmp.write_text(json.dumps({"title": title, "excerpt": excerpt, "content": content, "url": link, "image": (SITE_URL + image) if image else None}, ensure_ascii=False), encoding="utf-8")
         r = subprocess.run([sys.executable, str(NOTIFY), "naujiena", str(tmp)], capture_output=True, text=True, encoding="utf-8", errors="replace")
         print("Discord:", (r.stdout or r.stderr).strip())
         if r.returncode != 0:
