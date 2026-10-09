@@ -5,6 +5,7 @@
     "sha256": "f423d634ad4f1762d229da539febea96300f53b61eafd40b72309ddbd37e67c0"
   },
   "updateUrls": [
+    "http://updates.novacore.lt:8740/",
     "http://{address}:8740/"
   ],
   "torrent": {

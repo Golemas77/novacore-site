@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://novacore-site.vercel.app/sitemap.xml
+Sitemap: https://www.novacore.lt/sitemap.xml
