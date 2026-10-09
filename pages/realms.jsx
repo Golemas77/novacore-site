@@ -1,7 +1,8 @@
 import useOnline, { formatCount } from '../lib/useOnline';
 
 export default function Realms() {
-  const { loaded, ok, online, total } = useOnline();
+  const { loaded, ok, online, total, bots, players } = useOnline();
+  const split = typeof bots === 'number' && typeof players === 'number';
 
   const population =
     !loaded || !ok || !online ? 'Nežinoma'
@@ -60,7 +61,14 @@ export default function Realms() {
                   {!loaded ? (
                     <span className="text-white/70">…</span>
                   ) : online ? (
-                    formatCount(total)
+                    split ? (
+                      <>
+                        {formatCount(players)}
+                        <span className="block text-sm font-normal text-white/60">žaidėjų online · {formatCount(bots)} botų</span>
+                      </>
+                    ) : (
+                      formatCount(total)
+                    )
                   ) : (
                     <span className="text-white/50">—</span>
                   )}

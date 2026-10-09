@@ -1,6 +1,6 @@
 // POST /api/push-online
-// Zaidimo serveris (C:\NovaCore\push-online-total.ps1) kas minute siuncia { total, up }:
-//   total - BENDRAS prisijungusiu skaicius, up - ar veikia zaidimo serveris.
+// Zaidimo serveris (C:\NovaCore\push-online-total.ps1) kas minute siuncia { total, bots, players, up }:
+//   total - BENDRAS prisijungusiu skaicius, bots - botai, players - tikri zaidejai, up - ar veikia zaidimo serveris.
 import { kv } from '@vercel/kv';
 
 export default async function handler(req, res) {
@@ -29,6 +29,12 @@ export default async function handler(req, res) {
   }
   if (!Number.isFinite(total) || total < 0) total = 0;
 
+  // Atskiri skaiciai (nuo 2026-10-09): botai ir tikri zaidejai. Jei nepateikti - null (rodomas tik bendras).
+  const nb = Number(body.bots);
+  const np = Number(body.players);
+  const bots = Number.isFinite(nb) && nb >= 0 ? Math.floor(nb) : null;
+  const players = Number.isFinite(np) && np >= 0 ? Math.floor(np) : null;
+
   // up: ar veikia zaidimo serveris (jei nepateikta - laikom, kad veikia)
   const up = body.up === undefined ? true : Boolean(body.up);
 
@@ -39,11 +45,11 @@ export default async function handler(req, res) {
   try {
     const prev = await kv.get('online:current');
     const keepIp = ip || (prev && typeof prev === 'object' ? prev.ip : undefined);
-    await kv.set('online:current', { total, up, ip: keepIp, at: Date.now() });
+    await kv.set('online:current', { total, bots, players, up, ip: keepIp, at: Date.now() });
   } catch {
     // saugykla (Vercel KV / Upstash) nepasiekiama arba nesukonfiguruota
     return res.status(502).json({ ok: false, error: 'Storage error' });
   }
 
-  return res.status(200).json({ ok: true, total, up });
+  return res.status(200).json({ ok: true, total, bots, players, up });
 }

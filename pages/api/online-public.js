@@ -1,5 +1,5 @@
-// GET /api/online-public  ->  { ok, total, up, fresh, online }
-//   total  - bendras prisijungusiu skaicius
+// GET /api/online-public  ->  { ok, total, bots, players, up, fresh, online }
+//   total  - bendras prisijungusiu skaicius; bots / players - botai ir tikri zaidejai (null, jei nezinoma)
 //   online - serveris veikia IR duomenys atnaujinti per paskutines 3 minutes
 import { kv } from '@vercel/kv';
 
@@ -32,8 +32,11 @@ export default async function handler(req, res) {
     const fresh = at > 0 && Date.now() - at < FRESH_MS;
 
     const address = typeof data?.ip === 'string' ? data.ip : null;
+    const num = (v) => (v === null || v === undefined || !Number.isFinite(Number(v)) ? null : Number(v));
+    const bots = num(data?.bots);
+    const players = num(data?.players);
 
-    return res.status(200).json({ ok: true, total, up, fresh, online: up && fresh, address });
+    return res.status(200).json({ ok: true, total, bots, players, up, fresh, online: up && fresh, address });
   } catch (e) {
     // saugykla nepasiekiama - nerodome klaidingo skaiciaus
     return res.status(200).json({ ok: false, total: 0, up: false, fresh: false, online: false });
