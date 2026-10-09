@@ -70,7 +70,7 @@ Draw-Text $gr 'NovaCore' 'Segoe UI Semibold' 104 $true $white 70 205
 Draw-Text $gr 'Lietuviškas Ličo Karaliaus rūstybės serveris' 'Segoe UI' 38 $false $muted 78 335
 Draw-Text $gr 'WotLK 3.3.5a  ·  HD klientas  ·  lietuvių kalba' 'Segoe UI Semibold' 30 $false $sky 80 400
 Draw-Text $gr 'Hardkoro režimas  ·  Asmeninis grobis  ·  Paleidiklis su automatiniu atnaujinimu' 'Segoe UI' 26 $false $muted 80 470
-Draw-Text $gr 'novacore-site.vercel.app' 'Segoe UI Semibold' 30 $true $white 80 545
+Draw-Text $gr 'novacore.lt' 'Segoe UI Semibold' 30 $true $white 80 545
 $gr.Dispose()
 $jpgCodec = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Object { $_.MimeType -eq 'image/jpeg' }
 $ep = New-Object System.Drawing.Imaging.EncoderParameters 1
@@ -124,7 +124,7 @@ Draw-Text $g 'NovaCore' 'Segoe UI Semibold' 40 $true $white 18 84
 Draw-Text $g 'Lietuviškas WoW serveris' 'Segoe UI' 18 $false $muted 20 134
 Draw-Text $g 'WotLK 3.3.5a · HD · lietuvių k.' 'Segoe UI Semibold' 15 $false $sky 20 162
 Draw-Text $g 'Hardkoras · Asmeninis grobis' 'Segoe UI' 14 $false $muted 20 188
-Draw-Text $g 'novacore-site.vercel.app' 'Segoe UI Semibold' 15 $true $white 20 216
+Draw-Text $g 'novacore.lt' 'Segoe UI Semibold' 15 $true $white 20 216
 $g.Dispose()
 Save-Png $b (Join-Path $promo 'banner-300x250.png')
 
