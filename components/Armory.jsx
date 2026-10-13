@@ -1,3 +1,4 @@
+import { useState } from "react";
 // Veikėjo lapas (kaip „Armory“): informacija + apranga. Naudojamas „Mano kambaryje“, vėliau – viešame armory.
 const QUALITY = ["#9d9d9d", "#ffffff", "#1eff00", "#0070dd", "#a335ee", "#ff8000", "#e6cc80", "#00ccff"];
 
@@ -32,13 +33,44 @@ export function formatPlayed(sec) {
   return `${m} min.`;
 }
 
-function Slot({ slot, item }) {
-  const color = item ? QUALITY[item.q] || QUALITY[1] : "rgba(255,255,255,0.15)";
-  const title = item
-    ? `${item.name}\nPrekės lygis ${item.il}${item.e ? " · užkerėta" : ""}`
-    : SLOT_LABELS[slot];
+const TIP_COLORS = { n: null, w: "#ffffff", y: "#ffd100", g: "#1eff00", x: "#8b8b8b", r: "#ff2020" };
+
+function Tooltip({ item, color, side }) {
+  const pos = side === "left" ? "right-full mr-2 top-0" : side === "up" ? "bottom-full mb-2 left-0" : "left-full ml-2 top-0";
   return (
-    <div className="flex items-center gap-2" title={title}>
+    <div
+      role="tooltip"
+      className={`pointer-events-none absolute z-40 w-80 max-w-[85vw] rounded-lg border border-white/20 bg-slate-950/95 p-3 text-[13px] leading-snug shadow-xl ${pos}`}
+    >
+      {item.tip.map((ln, i) => {
+        const [cls, left, right] = ln;
+        if (!left && !right) return <div key={i} className="h-2" />;
+        const style = cls === "n" ? { color, fontWeight: 700, fontSize: "15px" } : { color: TIP_COLORS[cls] || "#fff" };
+        return right ? (
+          <div key={i} className="flex justify-between gap-4" style={style}>
+            <span>{left}</span>
+            <span>{right}</span>
+          </div>
+        ) : (
+          <div key={i} style={style}>{left}</div>
+        );
+      })}
+    </div>
+  );
+}
+
+function Slot({ slot, item, side = "right" }) {
+  const [open, setOpen] = useState(false);
+  const color = item ? QUALITY[item.q] || QUALITY[1] : "rgba(255,255,255,0.15)";
+  const hasTip = !!(item && item.tip && item.tip.length);
+  return (
+    <div
+      className="relative flex items-center gap-2"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      onClick={() => setOpen((v) => !v)}
+      title={hasTip ? undefined : item ? item.name : SLOT_LABELS[slot]}
+    >
       <div
         className="h-12 w-12 shrink-0 overflow-hidden rounded-md bg-black/40"
         style={{ border: `2px solid ${color}`, boxShadow: item ? `0 0 8px ${color}55` : "none" }}
@@ -63,14 +95,15 @@ function Slot({ slot, item }) {
           <div className="text-white/30">{SLOT_LABELS[slot]}</div>
         )}
       </div>
+      {open && hasTip && <Tooltip item={item} color={color} side={side} />}
     </div>
   );
 }
 
-function Column({ slots, items }) {
+function Column({ slots, items, side }) {
   return (
     <div className="space-y-2">
-      {slots.map((s) => <Slot key={s} slot={s} item={items[String(s)]} />)}
+      {slots.map((s) => <Slot key={s} slot={s} item={items[String(s)]} side={side} />)}
     </div>
   );
 }
@@ -96,21 +129,21 @@ export default function Armory({ c }) {
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[1fr_auto_1fr]">
-        <Column slots={LEFT} items={items} />
+        <Column slots={LEFT} items={items} side="right" />
         <div className="hidden lg:flex w-40 flex-col items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10 px-3 py-6 text-center">
           <div className="text-4xl font-bold" style={{ color }}>{c.level}</div>
           <div className="text-xs text-white/50">lygis</div>
           <div className="mt-4 text-2xl font-semibold text-white">{c.ilvl || "–"}</div>
-          <div className="text-xs text-white/50">vid. prekių lygis</div>
+          <div className="text-xs text-white/50">aprangos lygis</div>
         </div>
-        <Column slots={RIGHT} items={items} />
+        <Column slots={RIGHT} items={items} side="left" />
       </div>
       <div className="grid gap-2 sm:grid-cols-3">
-        {BOTTOM.map((s) => <Slot key={s} slot={s} item={items[String(s)]} />)}
+        {BOTTOM.map((s) => <Slot key={s} slot={s} item={items[String(s)]} side="up" />)}
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-sm">
-        <Stat label="Vid. prekių lygis" value={c.ilvl || "–"} />
+        <Stat label="Aprangos lygis" value={c.ilvl || "–"} />
         <Stat label="Pasiekimai" value={`${c.achCount} (${c.achPoints} tšk.)`} />
         <Stat label="Garbės nužudymai" value={c.honorKills} />
         <Stat label="Žaista" value={formatPlayed(c.played)} />
