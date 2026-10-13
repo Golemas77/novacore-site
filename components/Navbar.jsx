@@ -1,6 +1,20 @@
+import { useEffect, useState } from "react";
 import OnlineBadge from "./OnlineBadge";
 
 export default function Navbar() {
+  // prisijungusiam žaidėjui vietoje „Prisijunk“ rodome nuorodą į asmeninį kambarį
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    let alive = true;
+    fetch("/api/me")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => { if (alive && j && j.user) setUser(j.user); })
+      .catch(() => {});
+    return () => { alive = false; };
+  }, []);
+  const loginHref = user ? "/account" : "/login";
+  const loginLabel = user ? "Mano kambarys" : "Prisijunk";
+
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-900/70 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
@@ -29,13 +43,14 @@ export default function Navbar() {
           <a href="/realms" className="hover:text-white transition">Realmai</a>
           <a href="/downloads" className="hover:text-white transition">Atsisiuntimai</a>
           <a href="/media" className="hover:text-white transition">Medija</a>
-          <a href="/register" className="hover:text-white transition">Registracija</a>
+          <a href="/how-to-connect" className="hover:text-white transition">Kaip žaisti</a>
+          {!user && <a href="/register" className="hover:text-white transition">Registracija</a>}
           <span className="hidden lg:inline-flex"><OnlineBadge compact /></span>
           <a
-            href="/how-to-connect"
+            href={loginHref}
             className="rounded-md bg-gradient-to-r from-sky-500 to-indigo-500 px-3 py-1.5 font-medium text-white shadow hover:opacity-90"
           >
-            Prisijunk
+            {loginLabel}
           </a>
         </nav>
       </div>
@@ -47,8 +62,9 @@ export default function Navbar() {
         <a href="/realms" className="hover:text-white">Realmai</a>
         <a href="/downloads" className="hover:text-white">Atsisiuntimai</a>
         <a href="/media" className="hover:text-white">Medija</a>
-        <a href="/register" className="hover:text-white">Registracija</a>
-        <a href="/how-to-connect" className="font-medium text-sky-300 hover:text-sky-200">Prisijunk</a>
+        <a href="/how-to-connect" className="hover:text-white">Kaip žaisti</a>
+        {!user && <a href="/register" className="hover:text-white">Registracija</a>}
+        <a href={loginHref} className="font-medium text-sky-300 hover:text-sky-200">{loginLabel}</a>
         <OnlineBadge compact />
       </nav>
     </header>
