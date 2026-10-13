@@ -1,0 +1,19 @@
+{
+  "trailer": {
+    "title": "NovaCore treileris",
+    "video": "/media/novacore-treileris.mp4",
+    "poster": "/media/novacore-treileris.jpg",
+    "note": "26 sekundės žaidimo kadrų: lietuviškos užduotys, žemėlapiai ir pasaulis."
+  },
+  "photos": [
+    { "file": "01-veikejo-kurimas", "caption": "Veikėjo kūrimas: rasės, klasės ir mygtukai lietuviškai" },
+    { "file": "02-uzeiga-smuklininkas", "caption": "Užeigoje: NPC vardai ir užrašai lietuviškai" },
+    { "file": "03-uzeigos-vidus", "caption": "Užeigos vidus" },
+    { "file": "04-uzduoties-langas-kraujo-elfai", "caption": "Užduoties aprašymas lietuviškai" },
+    { "file": "05-uzduociu-zurnalas-sniegas", "caption": "Užduočių žurnalas sniegynuose" },
+    { "file": "06-zemelapis-ir-uzduotys", "caption": "Pasaulio žemėlapis ir užduočių sąrašas" },
+    { "file": "07-kalimdoro-zemelapis", "caption": "Kalimdoras: žemėlapio užrašai lietuviškai" },
+    { "file": "09-vakaras-zemese", "caption": "Vakaro prieblanda" },
+    { "file": "10-saulelydis-pakrantej", "caption": "Saulėlydis pakrantėje" }
+  ]
+}

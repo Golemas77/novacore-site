@@ -28,6 +28,7 @@ export default function Navbar() {
           <a href="/hardcore" className="hover:text-white transition">Hardkoras</a>
           <a href="/realms" className="hover:text-white transition">Realmai</a>
           <a href="/downloads" className="hover:text-white transition">Atsisiuntimai</a>
+          <a href="/media" className="hover:text-white transition">Medija</a>
           <a href="/register" className="hover:text-white transition">Registracija</a>
           <span className="hidden lg:inline-flex"><OnlineBadge compact /></span>
           <a
@@ -45,6 +46,7 @@ export default function Navbar() {
         <a href="/hardcore" className="hover:text-white">Hardkoras</a>
         <a href="/realms" className="hover:text-white">Realmai</a>
         <a href="/downloads" className="hover:text-white">Atsisiuntimai</a>
+        <a href="/media" className="hover:text-white">Medija</a>
         <a href="/register" className="hover:text-white">Registracija</a>
         <a href="/how-to-connect" className="font-medium text-sky-300 hover:text-sky-200">Prisijunk</a>
         <OnlineBadge compact />

@@ -1,4 +1,6 @@
 // C:\NovaCoreSite\components\Footer.jsx
+import social from "../data/social.json";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -9,8 +11,8 @@ export default function Footer() {
           © {year} NovaCore. Neoficialus WoW privatus projektas.
         </p>
 
-        {/* Dešinėje – paliekam tik Discord */}
-        <nav className="flex items-center gap-6">
+        {/* Dešinėje – nuorodos (socialinės nuorodos – data/social.json; tuščios nerodomos) */}
+        <nav className="flex flex-wrap items-center justify-center gap-6">
           {/* Serverio šaltinis: AGPLv3 reikalauja pasiūlyti žaidėjams pakeistą kodą */}
           <a
             href="https://github.com/Golemas77/novacore-server"
@@ -22,15 +24,32 @@ export default function Footer() {
             Šaltinio kodas
           </a>
 
-          {/* Nuolatinis kvietimas (galiojimas: niekada) */}
-          <a
-            href="https://discord.gg/5jkgRskPgj"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-sky-300"
-          >
-            Discord
+          <a href="/media" className="hover:text-sky-300">
+            Medija
           </a>
+
+          {/* Nuolatinis kvietimas (galiojimas: niekada) */}
+          {social.discord && (
+            <a
+              href={social.discord}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-sky-300"
+            >
+              Discord
+            </a>
+          )}
+
+          {social.instagram && (
+            <a
+              href={social.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-sky-300"
+            >
+              Instagram
+            </a>
+          )}
 
           {/*
           Vėliau galėsim pridėti:
