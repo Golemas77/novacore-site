@@ -111,5 +111,12 @@
     "date": "2026-10-16",
     "excerpt": "Žaidime atsirado lietuviškas požemių ir reidų atlasas: 74 požemiai ir reidai, 434 bosai su gebėjimais, taktikomis pagal vaidmenis ir grobio sąrašais.",
     "content": "• Kaip atidaryti: apatinėje mygtukų juostoje, tarp „Požemių ieškiklio“ ir „Meniu“, atsirado atlaso mygtukas. Taip pat veikia komandos /atlasas ir /atlas, o klavišą atlasui gali priskirti Valdymo nustatymuose.\n• Kairėje pasirenki požemį ar reidą (suskirstyti pagal plėtinį), viduryje – bosą, o dešinėje matai jo paveikslėlį ir tris skirtukus: Taktika, Gebėjimai ir Grobis.\n• Taktika: kiekvienam iš 434 bosų parašyta lietuviškai ir suskirstyta pagal vaidmenis – tankams, žalos darytojams ir gydytojams.\n• Gebėjimai: boso gebėjimų sąrašas su aprašais, kad žinotum, ko tikėtis kovoje.\n• Grobis: daiktai, kurie krenta iš boso, su apytiksliais šansais; reidams – pagal 10 / 25 žaidėjų ir herojinį režimą.\n• Gauti: paleisk paleidiklį, jis parsiųs atnaujinimą (versija 2026-10-16). Po atnaujinimo žaidimą reikia paleisti iš naujo.\n• Funkcija nauja, todėl gali pasitaikyti netikslumų – apie klaidas ar netikslius tekstus rašyk mūsų Discord serveryje."
+  },
+  {
+    "id": 17,
+    "title": "Daikto ir aprangos lygis žaidime – lengviau rinkti grupes",
+    "date": "2026-10-16",
+    "excerpt": "Visų daiktų aprašymuose dabar rodomas daikto lygis, veikėjo lange – tavo aprangos lygis, o užvedus pelę ant kito žaidėjo matysi ir jo aprangos lygį.",
+    "content": "• Daiktų aprašymuose: apačioje rodoma „Daikto lygis N“ – krepšyje, parduotuvėje, aukcione, grobyje ir nuorodose pokalbyje.\n• Veikėjo lange: apatiniame kairiajame modelio kampe matysi savo „Aprangos lygį“. Tas pats skaičius rodomas ir kito žaidėjo apžiūros lange.\n• Užvedus pelę ant žaidėjo (taip pat grupės ar reido rėmelyje) jo aprašyme atsiranda „Aprangos lygis“. Kad jį sužinotų, žaidėjas turi būti netoliese (apžiūros atstumu), pirmą kartą skaičius pasirodo po akimirkos.\n• Skaičiavimas toks pat kaip svetainės „Mano kambaryje“, todėl abu rodo tą patį aprangos lygį.\n• Komanda /ilvl parašo tavo aprangos lygį pokalbių lange.\n• Gauti: paleisk paleidiklį, jis parsiųs atnaujinimą (versija 2026-10-16). Po atnaujinimo žaidimą reikia paleisti iš naujo.\n• Funkcija nauja, todėl gali pasitaikyti netikslumų – apie klaidas rašyk mūsų Discord serveryje."
   }
 ]
