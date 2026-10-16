@@ -104,5 +104,12 @@
     "excerpt": "Pasaulio žemėlapyje matysi kiekvienos zonos lygių ribas, nuspalvintas pagal tavo lygį. Autopilotas pats persikelia į tinkamą zoną, spaudžia narvus, skaito užduočių knygas ir nebeužstringa urvuose.",
     "content": "Šiandien atnaujinome paleidiklį ir serverį. Naujienos:\n\n• Zonų lygiai žemėlapyje. Atidaryk pasaulio žemėlapį (M) ir užveski pelę ant zonos: prie pavadinimo matysi jos lygių ribas, pvz. „Dykros (10-25)“. Atidarius pačią zoną, ribos rodomos žemėlapio viršuje kairėje.\n• Spalvos pagal tavo lygį: raudona – zona per sunki, oranžinė – šiek tiek per sunki, geltona – tinka, žalia – lengva, pilka – per lengva. Priedas „NovaCore zonų lygiai“ įdiegiamas per paleidiklį automatiškai (/zonulygiai debug parodo zonas, kurių lygių dar nežinome).\n• Autopilotas (mygtukas A) dabar: persikelia į tavo lygiui tinkamą zoną, kai aplinkiniai priešai tampa per silpni; paspaudžia narvus ir svirtis užduotyse (belaisvių išlaisvinimas); perskaito užduočių knygas ir naudoja užduočių daiktus; kai kelio tinklu nėra (urvai, uždaros vietos), eina tiesiai per kliūtis, kad nebeužstrigtų.\n\nViskas dar testuojama, todėl klaidas ir pasiūlymus rašykite Discord. Esame nepelno entuziastų projektas, nesusijęs su Blizzard Entertainment.",
     "image": "/news/zonu-lygiai-zemynas.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Požemių ir reidų atlasas – bosai, taktikos ir grobis žaidime",
+    "date": "2026-10-16",
+    "excerpt": "Žaidime atsirado lietuviškas požemių ir reidų atlasas: 74 požemiai ir reidai, 434 bosai su gebėjimais, taktikomis pagal vaidmenis ir grobio sąrašais.",
+    "content": "• Kaip atidaryti: apatinėje mygtukų juostoje, tarp „Požemių ieškiklio“ ir „Meniu“, atsirado atlaso mygtukas. Taip pat veikia komandos /atlasas ir /atlas, o klavišą atlasui gali priskirti Valdymo nustatymuose.\n• Kairėje pasirenki požemį ar reidą (suskirstyti pagal plėtinį), viduryje – bosą, o dešinėje matai jo paveikslėlį ir tris skirtukus: Taktika, Gebėjimai ir Grobis.\n• Taktika: kiekvienam iš 434 bosų parašyta lietuviškai ir suskirstyta pagal vaidmenis – tankams, žalos darytojams ir gydytojams.\n• Gebėjimai: boso gebėjimų sąrašas su aprašais, kad žinotum, ko tikėtis kovoje.\n• Grobis: daiktai, kurie krenta iš boso, su apytiksliais šansais; reidams – pagal 10 / 25 žaidėjų ir herojinį režimą.\n• Gauti: paleisk paleidiklį, jis parsiųs atnaujinimą (versija 2026-10-16). Po atnaujinimo žaidimą reikia paleisti iš naujo.\n• Funkcija nauja, todėl gali pasitaikyti netikslumų – apie klaidas ar netikslius tekstus rašyk mūsų Discord serveryje."
   }
 ]
