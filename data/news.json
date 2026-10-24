@@ -92,10 +92,10 @@
   },
   {
     "id": 15,
-    "title": "Žemėlapyje atsirado zonų lygiai, o autopilotas tapo išradingesnis",
+    "title": "Žemėlapyje atsirado zonų lygiai",
     "date": "2026-10-09",
-    "excerpt": "Pasaulio žemėlapyje matysi kiekvienos zonos lygių ribas, nuspalvintas pagal tavo lygį. Autopilotas pats persikelia į tinkamą zoną, spaudžia narvus, skaito užduočių knygas ir nebeužstringa urvuose.",
-    "content": "Šiandien atnaujinome paleidiklį ir serverį. Naujienos:\n\n• Zonų lygiai žemėlapyje. Atidaryk pasaulio žemėlapį (M) ir užveski pelę ant zonos: prie pavadinimo matysi jos lygių ribas, pvz. „Dykros (10-25)“. Atidarius pačią zoną, ribos rodomos žemėlapio viršuje kairėje.\n• Spalvos pagal tavo lygį: raudona – zona per sunki, oranžinė – šiek tiek per sunki, geltona – tinka, žalia – lengva, pilka – per lengva. Priedas „NovaCore zonų lygiai“ įdiegiamas per paleidiklį automatiškai (/zonulygiai debug parodo zonas, kurių lygių dar nežinome).\n• Autopilotas (mygtukas A) dabar: persikelia į tavo lygiui tinkamą zoną, kai aplinkiniai priešai tampa per silpni; paspaudžia narvus ir svirtis užduotyse (belaisvių išlaisvinimas); perskaito užduočių knygas ir naudoja užduočių daiktus; kai kelio tinklu nėra (urvai, uždaros vietos), eina tiesiai per kliūtis, kad nebeužstrigtų.\n\nViskas dar testuojama, todėl klaidas ir pasiūlymus rašykite Discord. Esame nepelno entuziastų projektas, nesusijęs su Blizzard Entertainment.",
+    "excerpt": "Pasaulio žemėlapyje matysi kiekvienos zonos lygių ribas, nuspalvintas pagal tavo lygį.",
+    "content": "Šiandien atnaujinome paleidiklį ir serverį. Naujiena:\n\n• Zonų lygiai žemėlapyje. Atidaryk pasaulio žemėlapį (M) ir užveski pelę ant zonos: prie pavadinimo matysi jos lygių ribas, pvz. „Dykros (10-25)“. Atidarius pačią zoną, ribos rodomos žemėlapio viršuje kairėje.\n• Spalvos pagal tavo lygį: raudona – zona per sunki, oranžinė – šiek tiek per sunki, geltona – tinka, žalia – lengva, pilka – per lengva. Priedas „NovaCore zonų lygiai“ įdiegiamas per paleidiklį automatiškai (/zonulygiai debug parodo zonas, kurių lygių dar nežinome).\n\nViskas dar testuojama, todėl klaidas ir pasiūlymus rašykite Discord. Esame nepelno entuziastų projektas, nesusijęs su Blizzard Entertainment.",
     "image": "/news/zonu-lygiai-zemynas.jpg"
   },
   {
