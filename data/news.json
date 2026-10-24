@@ -118,5 +118,12 @@
     "date": "2026-10-16",
     "excerpt": "Visų daiktų aprašymuose dabar rodomas daikto lygis, veikėjo lange – tavo aprangos lygis, o užvedus pelę ant kito žaidėjo matysi ir jo aprangos lygį.",
     "content": "• Daiktų aprašymuose: apačioje rodoma „Daikto lygis N“ – krepšyje, parduotuvėje, aukcione, grobyje ir nuorodose pokalbyje.\n• Veikėjo lange: apatiniame kairiajame modelio kampe matysi savo „Aprangos lygį“. Tas pats skaičius rodomas ir kito žaidėjo apžiūros lange.\n• Užvedus pelę ant žaidėjo (taip pat grupės ar reido rėmelyje) jo aprašyme atsiranda „Aprangos lygis“. Kad jį sužinotų, žaidėjas turi būti netoliese (apžiūros atstumu), pirmą kartą skaičius pasirodo po akimirkos.\n• Skaičiavimas toks pat kaip svetainės „Mano kambaryje“, todėl abu rodo tą patį aprangos lygį.\n• Komanda /ilvl parašo tavo aprangos lygį pokalbių lange.\n• Gauti: paleisk paleidiklį, jis parsiųs atnaujinimą (versija 2026-10-16). Po atnaujinimo žaidimą reikia paleisti iš naujo.\n• Funkcija nauja, todėl gali pasitaikyti netikslumų – apie klaidas rašyk mūsų Discord serveryje."
+  },
+  {
+    "id": 18,
+    "title": "Lietuviški rasių pasakojimai veikėjo kūrimo ekrane",
+    "date": "2026-10-24",
+    "excerpt": "Kuriant veikėją, pasirinkus rasę (ir mirties riterio klasę), pasakojimą dabar girdėsi lietuviškai: 11 originalių pasakojimų įgarsinta nauju balsu.",
+    "content": "• Ką gauni: veikėjo kūrimo ekrane paspaudus rasę ar mirties riterio klasę, pasakojimas skamba lietuviškai. Įgarsinti visi 11: žmonės, nykštukai, gnomai, naktiniai elfai, drenėjai, orkai, atstumtieji, taurenai, troliai, kraujo elfai ir mirties riteris.\n• Kaip padaryta: tekstai išversti ir peržiūrėti rankiniu būdu, o įgarsinta dirbtinio intelekto balsu. Tarimą, kirčius ir pauzes derinome klausydami, kad pasakojimai skambėtų kuo natūraliau ir tilptų į originalų laiką.\n• Likęs žaidimo garsas (NPC balsai, kino filmukai) lieka originalus, angliškas, su lietuviškais titrais.\n• Gauti: paleisk paleidiklį, jis parsiųs atnaujinimą (apie 125 MB, versija 2026-10-24). Po atnaujinimo žaidimą paleisk iš naujo.\n• Funkcija nauja, todėl gali pasitaikyti netikslių tarimų – apie klaidas ar ką nors, kas skamba blogai, rašyk mūsų Discord serveryje (nurodyk rasę ir žodį)."
   }
 ]
