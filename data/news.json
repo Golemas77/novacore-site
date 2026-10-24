@@ -125,5 +125,12 @@
     "date": "2026-10-24",
     "excerpt": "Kuriant veikėją, pasirinkus rasę (ir mirties riterio klasę), pasakojimą dabar girdėsi lietuviškai: 11 originalių pasakojimų įgarsinta nauju balsu.",
     "content": "• Ką gauni: veikėjo kūrimo ekrane paspaudus rasę ar mirties riterio klasę, pasakojimas skamba lietuviškai. Įgarsinti visi 11: žmonės, nykštukai, gnomai, naktiniai elfai, drenėjai, orkai, atstumtieji, taurenai, troliai, kraujo elfai ir mirties riteris.\n• Kaip padaryta: tekstai išversti ir peržiūrėti rankiniu būdu, o įgarsinta dirbtinio intelekto balsu. Tarimą, kirčius ir pauzes derinome klausydami, kad pasakojimai skambėtų kuo natūraliau ir tilptų į originalų laiką.\n• Likęs žaidimo garsas (NPC balsai, kino filmukai) lieka originalus, angliškas, su lietuviškais titrais.\n• Gauti: paleisk paleidiklį, jis parsiųs atnaujinimą (apie 125 MB, versija 2026-10-24). Po atnaujinimo žaidimą paleisk iš naujo.\n• Funkcija nauja, todėl gali pasitaikyti netikslių tarimų – apie klaidas ar ką nors, kas skamba blogai, rašyk mūsų Discord serveryje (nurodyk rasę ir žodį)."
+  },
+  {
+    "id": 19,
+    "title": "Skrydžio taškai atsirakina pagal lygį",
+    "date": "2026-10-24",
+    "excerpt": "Pasiekus 10 lygį atsirakina visų žemynų pradinių zonų skrydžio taškai, o toliau kas 5 lygius – vis aukštesnių zonų: iki 80 lygio gausi visus savo frakcijos taškus.",
+    "content": "• Kaip veikia: pasiekus 10 lygį visuose žemynuose (Rytų karalystėse, Kalimdore, Užribyje ir Šiaurės Žemėje) atsirakina skrydžio taškai zonose, kurių lygis iki 10. Pasiekus 15, 20, 25 ir taip kas 5 lygius iki 80 atsirakina vis aukštesnio lygio zonų taškai.\n• Taškai atsirakina patys: nebereikia pirmą kartą nubėgti iki skrydžio meistro. Atsiradus naujiems taškams, pokalbių lange pamatysi žinutę.\n• Esamiems veikėjams: taškai atsirakina prisijungus, todėl 80 lygio veikėjas iškart turi visus savo frakcijos skrydžio taškus.\n• Atsirakina tik taškai, prie kurių stovi skrydžio meistras; užduočių ir specialūs taškai lieka kaip anksčiau.\n• Atnaujinimo siųstis nereikia – tai veikia serverio pusėje, tad pakanka prisijungti.\n• Funkcija nauja, todėl jei kuris nors skrydžio taškas neatsirakino ar atsirakino per anksti, parašyk mūsų Discord serveryje (nurodyk veikėjo lygį ir taško pavadinimą)."
   }
 ]
