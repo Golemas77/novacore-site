@@ -125,5 +125,12 @@
     "date": "2026-10-24",
     "excerpt": "Pasiekus 10 lygį atsirakina visų žemynų pradinių zonų skrydžio taškai, o toliau kas 5 lygius – vis aukštesnių zonų: iki 80 lygio gausi visus savo frakcijos taškus.",
     "content": "• Kaip veikia: pasiekus 10 lygį visuose žemynuose (Rytų karalystėse, Kalimdore, Užribyje ir Šiaurės Žemėje) atsirakina skrydžio taškai zonose, kurių lygis iki 10. Pasiekus 15, 20, 25 ir taip kas 5 lygius iki 80 atsirakina vis aukštesnio lygio zonų taškai.\n• Taškai atsirakina patys: nebereikia pirmą kartą nubėgti iki skrydžio meistro. Atsiradus naujiems taškams, pokalbių lange pamatysi žinutę.\n• Esamiems veikėjams: taškai atsirakina prisijungus, todėl 80 lygio veikėjas iškart turi visus savo frakcijos skrydžio taškus.\n• Atsirakina tik taškai, prie kurių stovi skrydžio meistras; užduočių ir specialūs taškai lieka kaip anksčiau.\n• Atnaujinimo siųstis nereikia – tai veikia serverio pusėje, tad pakanka prisijungti.\n• Funkcija nauja, todėl jei kuris nors skrydžio taškas neatsirakino ar atsirakino per anksti, parašyk mūsų Discord serveryje (nurodyk veikėjo lygį ir taško pavadinimą)."
+  },
+  {
+    "id": 20,
+    "title": "Visų žaidžiamų rasių balsai dabar lietuviškai",
+    "date": "2026-11-03",
+    "excerpt": "Lietuviškai kalba visos dešimt žaidžiamų rasių: žmonės, orkai, nykštukai, naktiniai elfai, gnomai, drenėjai, nemirėliai, taurenai, troliai ir kraujo elfai.",
+    "content": "• Veikėjo balsas lietuviškai: klaidų frazės („Kuprinė pilna“), komandos, pasisveikinimai, flirtas ir pokštai.\n• Rasių NPC taip pat kalba lietuviškai: sargybiniai, pardavėjai, pasisveikinimai ir atsisveikinimai.\n• Kiekviena rasė turi savo tembrą: orkų grubumas, trolų prikimimas, nemirėlių užkimimas, gnomų guvumas, drenėjų lengvas akcentas.\n• Daugiau nei 3 400 įrašų. Įsijungia pats, kai atnaujini klientą per NovaCore paleidiklį.\n• Balsai sintezuoti, todėl kartais gali pasitaikyti netaisyklingas kirtis. Radai klaidą? Parašyk mums Discord serveryje."
   }
 ]
