@@ -37,17 +37,17 @@ const features = [
   {
     title: 'Karo režimas',
     text: '+20 % patirties už priešus ir užduotis. PvP vyksta tik tarp karo režimo žaidėjų.',
-    tag: 'Testuojama',
+    tag: 'Veikia',
   },
   {
     title: 'Požemių pasiuntiniai',
     text: 'Prie požemių įėjimų stovi NPC, kuris duoda ir priima požemių užduotis.',
-    tag: 'Testuojama',
+    tag: 'Veikia',
   },
   {
     title: 'Išvaizdos meistrė',
     text: 'Pakeisk daikto išvaizdą nekeisdamas jo savybių. Kolekcija bendra visai paskyrai.',
-    tag: 'Testuojama',
+    tag: 'Veikia',
   },
 ];
 
@@ -124,7 +124,7 @@ export default function Home() {
         <div>
           <h2 className="text-2xl md:text-3xl font-bold">Ką rasi NovaCore</h2>
           <p className="mt-2 text-white/70 max-w-2xl">
-            Šias sistemas sukūrėme patys. Kai kurios jau išbandytos žaidime, kitos dar testuojamos, todėl pažymėtos atskirai.
+            Šias sistemas sukūrėme patys, ir visos jau veikia žaidime.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
